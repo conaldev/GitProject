@@ -10,7 +10,7 @@
         Họ và tên:
         <input name="hoten" type="text"/><br><br>
         Ngày sinh:
-        <input name="birth" type="text"/><br><br>
+        <input name="birth" type="date"/><br><br>
         Giới tính:
         <label><input name="a" value ="Nam" type ="radio"/>Nam</label>
         <label><input name="a" value ="Nam" type ="radio"/>Nữ</label> <br><br>
@@ -18,14 +18,15 @@
         <textarea cols="30" rows="3"></textarea> <br><br>
         Lớp:
         <select name="lop" value = "Chọn lớp">
+            <option value="0" readonly>--Chọn lớp--</option>
             <option value="1">Lớp 1</option>
             <option value="3">Lớp 2</option>
             <option value="5">Lớp 3</option>
           </select> <br><br>
         Email:
-        <input name="email" type="text"/><br><br>
+        <input name="email" type="email"/><br><br>
         Điện thoại:
-        <input name="phone" type="text"/><br><br>
+        <input name="phone" type="tel"/><br><br>
         <input type="submit" value="Submit"/>
         <input type="reset" value="Reset"/>
     </form>
