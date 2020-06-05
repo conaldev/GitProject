@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="017010e9-13a2-4c23-b405-017f8587353d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/btChung/taoBasicTable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/btChung/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btChung/thucHanhTaoBangNangCao.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btChung/simpleform.html" beforeDir="false" afterPath="$PROJECT_DIR$/btChung/simpleform.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunManager">
@@ -79,7 +78,7 @@
       <workItem from="1591261000054" duration="1498000" />
       <workItem from="1591283741699" duration="14000" />
       <workItem from="1591322810685" duration="19000" />
-      <workItem from="1591322830322" duration="2248000" />
+      <workItem from="1591322830322" duration="3566000" />
     </task>
     <servers />
   </component>
