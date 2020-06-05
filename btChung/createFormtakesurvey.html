@@ -9,27 +9,33 @@
 		<div>
 			<h2>Market Research Survey</h2>
 			<div class="">Please take a few moments to complete this satisfaction survey. </div></div>
-				<p><b>What is your age range?</b></p>
-				<select name="ageRange" id="ageRange" style="width: 400px;">
-					<option value="18-24">18-24</option>
-					<option value="25-34">25-34</option>
-					<option value="35-50">35-50</option>
-					<option value="50+">50+</option>
-				</select>
+				<fieldset><p><b>What is your age range?</b></p>
+					<select name="ageRange" id="ageRange" style="width: 400px;">
+						<option value="18-24">18-24</option>
+						<option value="25-34">25-34</option>
+						<option value="35-50">35-50</option>
+						<option value="50+">50+</option>
+					</select>
+				</fieldset>
 				<br>
-				<p><b>What is your yearly income range?</b></p>
+				<fieldset>
+					<p><b>What is your yearly income range?</b></p>
 				<select name="income" id="income" style="width: 400px;">
 					<option value="$0 - $25,000">$0 - $25,000</option>
 					<option value="$25,001 - $50,000">$25,001 - $50,000</option>
 					<option value="$50,001 - $100,000">$50,001 - $100,000</option>
 					<option value="$100,000+">$100,000+</option>
 				</select>
-				<p><b>Gender Identity</b></p>
+				</fieldset>
+				<br>
+				<fieldset>
+					<p><b>Gender Identity</b></p>
 				<label><input name="gender" value="male" type="radio"/> Male</label> <br/>
   				<label><input name="gender" value="female" type="radio"/> Female</label> <br/>
 				<label><input name="gender" value="nonbinary" type="radio"> Nonbinary</label> <br/>
 				<label><input name="gender" value="other" type="radio">Other<br><input type="text" name="other"/></label> <br/>
 
+				</fieldset>
 
 </body>
 </html>
