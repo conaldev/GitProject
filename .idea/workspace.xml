@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="017010e9-13a2-4c23-b405-017f8587353d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/btChung/BTtaoFormDonGian/btTaoFormCoban.html" beforeDir="false" afterPath="$PROJECT_DIR$/btChung/BTtaoFormDonGian/btTaoFormCoban.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btChung/createFormtakesurvey.html" beforeDir="false" afterPath="$PROJECT_DIR$/btChung/createFormtakesurvey.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +80,7 @@
       <workItem from="1591322810685" duration="19000" />
       <workItem from="1591322830322" duration="7318000" />
       <workItem from="1591340099886" duration="664000" />
+      <workItem from="1591415373699" duration="1824000" />
     </task>
     <servers />
   </component>

@@ -3,39 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research</title>
+	<title>Research</title>
+	<style>
+		table{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		th,td,tr{
+			border:1px solid black ;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			padding 20px
+		}
+		tr:nth-child(odd) {
+    background-color: #dddddd;
+	}
+	</style>
 </head>
-<body>
-		<div>
+<body style="width: 100%;">
 			<h2>Market Research Survey</h2>
-			<div class="">Please take a few moments to complete this satisfaction survey. </div></div>
-				<fieldset><p><b>What is your age range?</b></p>
-					<select name="ageRange" id="ageRange" style="width: 400px;">
-						<option value="18-24">18-24</option>
-						<option value="25-34">25-34</option>
-						<option value="35-50">35-50</option>
-						<option value="50+">50+</option>
-					</select>
-				</fieldset>
-				<br>
-				<fieldset>
-					<p><b>What is your yearly income range?</b></p>
-				<select name="income" id="income" style="width: 400px;">
-					<option value="$0 - $25,000">$0 - $25,000</option>
-					<option value="$25,001 - $50,000">$25,001 - $50,000</option>
-					<option value="$50,001 - $100,000">$50,001 - $100,000</option>
-					<option value="$100,000+">$100,000+</option>
+			Please take a few moments to complete this satisfaction survey.<br><br>
+			<form action="">
+				<fieldset style="border: hidden;"><legend>What is your age range?</legend>
+				<select name="ageRange" id="ageRange" style="width: 400px;">
+					<option value="18-24">18-24</option>
+					<option value="25-34">25-34</option>
+					<option value="35-50">35-50</option>
+					<option value="50+">50+</option>
 				</select>
-				</fieldset>
-				<br>
-				<fieldset>
-					<p><b>Gender Identity</b></p>
-				<label><input name="gender" value="male" type="radio"/> Male</label> <br/>
-  				<label><input name="gender" value="female" type="radio"/> Female</label> <br/>
-				<label><input name="gender" value="nonbinary" type="radio"> Nonbinary</label> <br/>
-				<label><input name="gender" value="other" type="radio">Other<br><input type="text" name="other"/></label> <br/>
-
-				</fieldset>
-
+			</fieldset>
+			<br>
+			<fieldset style="border: hidden;">
+				<legend>What is your yearly income range?</legend>
+			<select name="income" id="income" style="width: 400px;">
+				<option value="$0 - $25,000">$0 - $25,000</option>
+				<option value="$25,001 - $50,000">$25,001 - $50,000</option>
+				<option value="$50,001 - $100,000">$50,001 - $100,000</option>
+				<option value="$100,000+">$100,000+</option>
+			</select>
+			</fieldset >
+			<br>
+			<fieldset style="border: hidden;">
+				<legend>Gender Identity</legend>
+			<label><input name="gender" value="male" type="radio"/> Male</label> <br/>
+			  <label><input name="gender" value="female" type="radio"/> Female</label> <br/>
+			<label><input name="gender" value="nonbinary" type="radio"> Nonbinary</label> <br/>
+			<label><input name="gender" value="other" type="radio">Other<br><input type="text" name="other"/></label> <br/></fieldset>
+			<Fieldset style="border: hidden;"><legend>Which of the following products have your purchased in the last 2 months. Please check all that apply.</legend>
+				<label><input name="products" value="product 1" type="checkbox"/> Product 1</label> <br/>
+				<label><input name="products" value="product 2" type="checkbox"/> Product 2</label> <br/>
+				<label><input name="products" value="product 3" type="checkbox"/>Product 3</label> <br/>
+			</Fieldset>
+			<fieldset style="border: hidden;"><legend>How often would you use our new product?</legend>
+			<label><input type="radio" value="Daily">Daily</label> <br>
+			<label><input type="radio" value="Weekly">Weekly</label><br>
+			<label><input type="radio" value="Monthly">Monthly</label>
+			</fieldset>
+			<fieldset style="border: hidden;"><legend>What would you pay for the new product?</legend>
+				$ <label><input type="number" value="Dollars">.</label><label><input type="number"></label>
+			</fieldset>
+			<fieldset style="border: hidden;">
+				<legend>What features would you like to see in the new product</legend>
+				<textarea cols="200" rows="6"></textarea>
+			</fieldset>
+			<table>
+				<tr>
+					<th> </th>
+					<th>Strongly Disagreee</th>
+					<th>Disagreee</th>
+					<th>Agree</th>
+					<th>Strongly Agree</th>
+				</tr>
+				<tr>
+					<th>Our products are priced fairly</th>
+					<td><label><input type="radio" value="1"><br></label></td>
+					<td><label><input type="radio" value="1"><br></label></td>
+					<td><label><input type="radio" value="1"><br></label></td>
+					<td><label><input type="radio" value="1"><br></label></td>
+				</tr>
+				<tr>
+					<th>Our products are high quality</th>
+					<td><label><input type="radio" value="1"><br></label></td>
+					<td><label><input type="radio" value="1"><br></label></td>
+					<td><label><input type="radio" value="1"><br></label></td>
+					<td><label><input type="radio" value="1"><br></label></td>
+				</tr>
+				<tr>
+					<th>You would recommend our product to a friend or coworker</th>
+					<td><label><input type="radio" value="1"><br></label></td>
+					<td><label><input type="radio" value="1"><br></label></td>
+					<td><label><input type="radio" value="1"><br></label></td>
+					<td><label><input type="radio" value="1"><br></label></td>
+				</tr>
+			</table>
+			<br>
+			<div>
+				<input type="submit" value="Submit">
+				<input type="reset" value="Reset"></div>
+</form>		
 </body>
 </html>
