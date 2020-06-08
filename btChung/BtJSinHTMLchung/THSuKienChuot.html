@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <img  id="myImage" src="https://cdn.trochoiviet.com/wp-content/uploads/2016/08/pikachu.jpg" style="width: 200px; margin-left: 800px;"/>
+        <div style="margin: auto; display: block; width: 600px;">
+            <input type="button" value="moveLeft" onclick="moveLeft()"; />
+             <input type="button" value="moveRight" onclick="moveRight()"; />
+        </div>
+    </form>
+    <script>
+        let imgObj = null;
+        function init(){
+        imgObj = document.getElementById('myImage');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+        }
+        function moveRight(){
+            imgObj.style.left = parseInt(imgObj.style.left) + 15 + 'px';
+        }
+        function moveLeft(){
+            imgObj.style.left = parseInt(imgObj.style.left) - 15 + 'px';
+        }
+        window.onload = init;
+    </script>
+</body>
+</html>
