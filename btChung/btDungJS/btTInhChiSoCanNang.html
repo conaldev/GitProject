@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let weight = parseInt(prompt("Enter a weigth (kg):"));
+        let height = parseInt(prompt("Enter a height (m): "));
+        let bmi = weight/(height*height);
+        if (bmi < 18)
+            alert("Underweight");
+        else if (bmi < 25.0)
+            alert("Normal");
+        else if (bmi < 30.0)
+            alert("Overweight");
+        else
+            alert("Obese");
+    </script>
+</body>
+</html>
