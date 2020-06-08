@@ -5,36 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        convert(){
-            
+    function convert() {
+        let amount = document.getElementById("input").value; //khai bao 
+        let first = document.getElementById("FCurrency").value;
+        let last = document.getElementById("TCurrency").value;
+        if(first === "VN"){
+            if(last ==="VN"){
+                document.getElementById("output").innerHTML = amount;
+            } else if(last === "USD"){
+                 amount/=23000;
+                document.getElementById("output").innerHTML = amount;
+            }
         }
+
+        if (first === "USD"){
+            if(last === "USD"){
+                document.getElementById("output").innerHTML = amount;
+            }else if(last === "VN"){
+                 amount*=23000;
+                document.getElementById("output").innerHTML = amount;
+            }
+        }
+    }
+
     </script>
 </head>
 <body>
     <form>
-        <table style="border: bla;">
+        <table style="width: 50%; border-collapse: collapse;">
             <tr>
                 <th>Amount</th>
                 <th>From Curency</th>
                 <th>To Currency</th>
             </tr>
             <tr>
-                <td><input type="number" name="Amount" id = "input" oninput="convert()"></td>
-                <td><select>
-                    <option name="VN" value="VietNam">VietNam</option>
-                    <option name="US" value="USD">USD</option>
-                    <option name="JP" value="YEN">YEN</option>
+                <td><input type="number" name="Amount" id = "input"></td>
+                <td><select id ="FCurrency">
+                    <option value="VN">VietNam</option>
+                    <option value="USD">USD</option>
                 </select>
                 </td>
-                <td><select>
-                    <option name="VN" value="VietNam">VietNam</option>
-                    <option name="US" value="USD">USD</option>
-                    <option name="JP" value="YEN">YEN</option>
+                <td><select id = "TCurrency">
+                    <option value="VN">VietNam</option>
+                    <option value="USD">USD</option>  
                 </select>
                 </td>
             </tr>
         </table>
-        <input type="submit" value="Convert">
+        <button type="button" name=submit" value="convert" onclick="convert()">Convert</button>
     </form>
+    <p id="output"></p>
 </body>
 </html>
