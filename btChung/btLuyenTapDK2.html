@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập cấu trúc điều kiện 02</title>
+    <style>
+        h2 {
+            color:darkviolet;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<h2>Bài 1: Chuyển từ độ C sang độ F.</h2>
+<button type="button" onclick="c_to_f()">RUN</button>
+<hr>
+
+<h2>Bài 2: Chuyển từ mét sang feet:</h2>
+<button type="button" onclick="met_to_feet()">RUN</button>
+<hr>
+<h2>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</h2>
+<button type="button" onclick="square_area()">RUN</button>
+<hr>
+
+<h2>Bài 4: Tính diện tích hình chữ nhật khi biết 02 cạnh a, b.</h2>
+<button type="button" onclick="rec_area()">RUN</button>
+
+<hr>
+<h2>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</h2>
+<button type="button" onclick="triangle_area()">RUN</button>
+<hr>
+
+
+<h2>Bài 6: Giải phương trình bậc 1.</h2>
+<button type="button" onclick="simple_equation()">RUN</button>
+<hr>
+<h2>Bài 7: Giải phương trình bậc 2.</h2>
+<button type="button" onclick="quad_equation()">RUN</button>
+<hr>
+
+<h2>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên
+    là tuổi của một người khi nhỏ 120 và lơn hơn 0.</h2>
+<button type="button" onclick="check_human_age()">RUN</button>
+<hr>
+<h2>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.
+    Điều kiện để a,b,c là cạnh của một tam giác là:</h2>
+<button type="button" onclick="check_triangle_line()">RUN</button>
+<hr>
+
+<h2>Bài 10: Viết chương trình tính giá điện.</h2>
+<button type="button" onclick="electric_cost_cal()">RUN</button>
+<hr>
+<h2>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h2>
+<button type="button" onclick="personal_income_tax()">RUN</button>
+<hr>
+<h2>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền
+    ban đầu, số tháng cho vay và lãi xuất hàng tháng.</h2>
+<button type="button" onclick="bank_rate_cal()">RUN</button>
+
+
+<script>
+    function c_to_f() {
+        let celcius = parseInt(prompt('Nhap do C'));
+        let fahrenheit = celcius * 9 / 2 + 32;
+        alert(celcius + ' do C bang ' + fahrenheit + ' do F.');
+    }
+
+    function met_to_feet() {
+        let metter = parseInt(prompt('Nhap so do bang met'));
+        let feet = metter * 3.2808;
+        alert(metter + ' Metters = ' + feet + ' feet.');
+    }
+
+    function square_area() {
+        let a = parseInt(prompt('Nhap do dai canh hinh vuong'));
+        let area;
+        if (a > 0) {
+            area = a * a;
+            alert('Dien tich hinh vuong la: ' + area);
+        } else {
+            alert('Wrong Data');
+        }
+    }
+
+    function rec_area() {
+        let a = parseInt(prompt('Nhap do dai canh thu nhat'));
+        let b = parseInt(prompt('Nhap do dai canh thu hai'));
+        let area = a * b;
+        if (a > 0 && b > 0) {
+            alert('Dien tich hinh chu nhat la: ' + area);
+        } else {
+            alert('Du lieu nhap vao khong dung');
+        }
+    }
+
+    function triangle_area() {
+        let a = parseInt(prompt('Nhap do dai canh ben thu nhat'));
+        let h = parseInt(prompt('Nhap do dai canh ben thu hai'));
+        let area = a * h / 2;
+        if (a > 0 && h > 0) {
+            alert('Dien tich hinh tam giac vuong la: ' + area);
+        } else {
+            alert('Du lieu nhap vao khong dung');
+        }
+    }
+
+    function simple_equation() {
+        let a = parseInt(prompt('Nhap doi so a cho phuong trinh bac nhat: ax + b = 0'));
+        let b = parseInt(prompt('Nhap doi so b cho phuong trinh bac nhat: ax + b = 0'));
+        let x;
+        if (a == 0 && b == 0) {
+            alert('Phuong trinh vo so nghiem');
+        } else if (a == 0 && b != 0) {
+            alert('Phuong trinh vo nghiem');
+        } else {
+            x = -b / a;
+            alert('Nghiem cua phuong trinh bac nhat la: ' + x);
+        }
+    }
+
+    function quad_equation() {
+        let a = parseInt(prompt('Nhap doi so a cho phuong trinh bac hai: ax2 + bx + c = 0'));
+        let b = parseInt(prompt('Nhap doi so b cho phuong trinh bac hai: ax2 + bx + c = 0'));
+        let c = parseInt(prompt('Nhap doi so a cho phuong trinh bac hai: ax2 + bx + c = 0'));
+        let delta;
+        let x1;
+        let x2;
+
+        if (a == 0) {
+            alert('Ko phai phuong trinh bac 2');
+        } else {
+            delta = b * b - 4 * a * c;
+            if (delta < 0) {
+                alert('Phuonng trinh vo nghiem');
+            } else if (delta == 0) {
+                x1 = x2 = -b / 2 * a;
+                alert('Phuong trinh co nghiem kep x1 = x2= ' + x1);
+            } else {
+                x1 = -b - Math.sqrt(delta) / 2 / a;
+                x2 = -b + Math.sqrt(delta) / 2 / a;
+                alert('Phuong trinh co 2 nghiem x1 = ' + x1 + ' x2 = ' + x2);
+            }
+        }
+
+    }
+
+    function check_human_age() {
+        let age = parseInt(prompt('Nhap tuoi cua ban'));
+        if (age < 0 || age > 120) {
+            alert('Du lieu nhap vao khong phai tuoi cua mot nguoi');
+
+        } else {
+            alert('Tuoi cua ban la: ' + age);
+        }
+    }
+
+    function check_triangle_line() {
+        let a = parseInt(prompt('Nhap do dai canh a'));
+        let b = parseInt(prompt('Nhap do dai canh b'));
+        let c = parseInt(prompt('Nhap do dai canh c'));
+        let length_check = a >= 0 || b >= 0 || c >= 0;
+        let logic_check = a + b >= c && a + c >= b & b + c >= a;
+
+        if (length_check && logic_check) {
+            alert('a, b, c la 3 canh cua mot tam giac');
+        } else {
+            alert('a, b, c khong phai la 3 canh cua mot tam giac');
+        }
+    }
+
+    function electric_cost_cal() {
+        const level1 = 50;
+        const level2 = 100;
+        const level3 = 200;
+        const level4 = 300;
+        const level5 = 400;
+        const price1 = 1678;
+        const price2 = 1734;
+        const price3 = 2014;
+        const price4 = 2536;
+        const price5 = 2834;
+        const price6 = 2927;
+        let kwh_used = parseInt(prompt('Nhap so kwh dien tieu thu trong thang'));
+        let bill_amount;
+        if (kwh_used > 0) {
+            if (kwh_used <= level1) {
+                bill_amount = kwh_used * price1;
+            } else if (kwh_used <= level2) {
+                bill_amount = level1 * price1 + (kwh_used - level1) * price2;
+            } else if (kwh_used <= level3) {
+                bill_amount = level1 * price1 + (level2 - level1) * price2 + (kwh_used - level2) * price3;
+            } else if (kwh_used <= level4) {
+                bill_amount = level1 * price1 + (level2 - level1) * price2 + (level3 - level2) * price3 + (kwh_used - level3) * price4;
+            } else if (kwh_used <= level5) {
+                bill_amount = level1 * price1 + (level2 - level1) * price2 + (level3 - level2) * price3 + (level4 - level3) * price4 + (kwh_used - level4) * price5;
+
+            } else {
+                bill_amount = level1 * price1 + (level2 - level1) * price2 + (level3 - level2) * price3 + (level4 - level3) * price4 + (level5 - level4) * price5 + (kwh_used - level5) * price6
+            }
+            alert('So tien dien phai tra thang nay la: ' + bill_amount);
+        }
+    }
+
+    function personal_income_tax() {
+        let income = parseInt(prompt('Nhap tong thu nhap cua ban trong 1 nam'));
+        let deduct_dependent = parseInt(prompt('Nhap khoan giam tru Nguoi phu thuoc cua ban hang thang'));
+        let deduct_family = parseInt(prompt('Nhap khoan giam tru Gia canh hang thang'));
+        let withhold = parseInt(prompt('Nhap khoan khau tru thue hang thang'));
+        let deduct_self = 9000000;
+        let taxable_income;
+        const level1 = 60000000;
+        const level2 = 120000000;
+        const level3 = 216000000;
+        const level4 = 384000000;
+        const level5 = 624000000;
+        const level6 = 960000000;
+        const rate1 = 0.05;
+        const rate2 = 0.1;
+        const rate3 = 0.15;
+        const rate4 = 0.2;
+        const rate5 = 0.25;
+        const rate6 = 0.3;
+        const rate7 = 0.35;
+        let tax_amount;
+        if (income < 0 || deduct_family < 0 || deduct_dependent < 0 || withhold < 0) {
+            alert('Du lieu nhap vao khong hop le');
+        } else {
+            taxable_income = income - (deduct_self + deduct_dependent + deduct_family + withhold) * 12;
+            if (taxable_income <= 0) {
+                alert('Khoan thue thu nhap ca nhan cua ban trong nam nay la: 0.');
+            } else {
+                if (taxable_income <= level1) {
+                    tax_amount = taxable_income * rate1;
+                } else if (taxable_income <= level2) {
+                    tax_amount = level1 * rate1 + (taxable_income - level1) * rate2;
+
+                } else if (taxable_income <= level2) {
+                    tax_amount = level1 * rate1 + (level2 - level1) * rate2 + (taxable_income - level2) * rate3;
+                } else if (taxable_income <= level3) {
+                    tax_amount = level1 * rate1 + (level2 - level1) * rate2 + (level3 - level2) * rate3 + (taxable_income - level3) * rate4;
+                } else if (taxable_income <= level4) {
+                    tax_amount = level1 * rate1 + (level2 - level1) * rate2 + (level3 - level2) * rate3 + (level4 - level3) * rate4 + (taxable_income - level4) * rate5;
+                } else if (taxable_income <= level5) {
+                    tax_amount = level1 * rate1 + (level2 - level1) * rate2 + (level3 - level2) * rate3 + (level4 - level3) * rate4 + (level5 - level4) * rate5 + (taxable_income - level5) * rate6;
+                } else {
+                    tax_amount = level1 * rate1 + (level2 - level1) * rate2 + (level3 - level2) * rate3 + (level4 - level3) * rate4 + (level5 - level4) * rate5 + (level6 - level5) * rate6 + (taxable_income - level6) * rate7;
+                }
+            }
+        }
+        alert('Khoan thue thu nhap ca nhan phai nop trong nam nay la: ' + tax_amount);
+
+    }
+
+    function bank_rate_cal() {
+        let loan_amount = parseInt(prompt('Nhap khoan tien muon vay'));
+        let months = parseInt(prompt('Nhap thoi han vay (thang)'));
+        let rate = parseInt(prompt('Nhap lai suat vay (%/nam)'))/100;
+        let interest_per_month = loan_amount * (rate / 12);
+        let interest = interest_per_month * months;
+        alert('Tong so tien lai phai tra: ' + interest +' ; Lai phai tra hang thang: ' + interest_per_month);
+    }
+</script>
+</body>
+</html>
