@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let kiemTra = parseInt(prompt("Enter a score kiem tra from 0 to 10"));
+        let giuaKi= parseInt(prompt("Enter a score giua ki from 0 to 10"));
+        let cuoiKi = parseInt(prompt("Enter a score cuoi ki from 0 to 10"));
+        let diemPhay= kiemTra*0.1 + giuaKi*0.2 + cuoiKi*0.7;
+        if(diemPhay>=9 && diemPhay<=10) alert("Gioi");
+        else if(diemPhay>=7) alert("Kha");
+        else if(diemPhay >= 5) alert("Trung binh ");
+        else if(diemPhay >=3) alert("Yeu");
+        else alert("Kem");
+    </script>
+</body>
+</html>
