@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="number" id="inputMonth" />
+        <input type="button"  onclick="calcDays()" value="Tính số ngày"/>
+        <div id = "output"></div>
+    </form>
+    <script>
+        function calcDays(){
+            let month = parseInt(document.getElementById("inputMonth").value);
+            switch(month){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById("output").innerHTML="Tháng "+month+" có 31 ngày"
+                    break;
+                case 2:
+                    document.getElementById("output").innerHTML="Tháng 2 có 28 hoặc 29 ngày"
+                    break;
+                default:
+                    document.getElementById("output").innerHTML="Tháng "+month+"có 31 ngày"
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
