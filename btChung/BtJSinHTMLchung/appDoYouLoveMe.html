@@ -29,8 +29,8 @@
     function runAway() {
         let rTop;
         let rLeft;
-        rTop= Math.floor(Math.random() * window.innerHeight);
-        rLeft = Math.floor(Math.random() * window.innerWidth);
+        rTop= Math.random() * window.innerHeight;
+        rLeft =Math.random() * window.innerWidth;
         document.getElementById("no").style.top = rTop + 'px';
         document.getElementById("no").style.left = rLeft + 'px';
     }

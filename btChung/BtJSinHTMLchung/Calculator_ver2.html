@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <style>
+           form {
+  background: #ccc;
+  margin: 0 auto;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+form * {
+  box-sizing: border-box;
+}
+
+form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+form table tr, form table td {
+  border: 1px solid #eee;
+}
+
+form table tr:first-child input {
+  height: 50px;
+  padding: 0 10px;
+  font-weight: 700;
+}
+
+form table tr:not(:first-child) td {
+  height: 70px;
+}
+
+form table tr:not(:first-child) td input {
+  height: 100%;
+}
+
+form table input {
+  width: 100%;
+  display: block;
+  border: 0;
+  font-size: 16px;
+}
+
+form table input:focus {
+  outline: none;
+}
+
+form table input:hover {
+  background: #eee;
+  transition: all .2s ease-in-out;
+}
+
+form table input.operator {
+  font-weight: 700;
+  color:white;
+  background: blue;
+}
+        
+    </style>
+</head>
+<body>
+    <form>
+    <table>
+        <tr>
+            <th colspan="4" style="height: 50px;"><span id="Result"></span></th>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="Display(this.value);"/></td>
+            <td><input type="button" value="2" onclick="Display(this.value);"/></td>
+            <td><input type="button" value="3" onclick="Display(this.value);"/></td>
+            <td><input class="operator" type="button" value="+" onclick="Display(this.value);"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="Display(this.value);"/></td>
+            <td><input type="button" value="5" onclick="Display(this.value);"/></td>
+            <td><input type="button" value="6" onclick="Display(this.value);"/></td>
+            <td><input class="operator" type="button" value="-" onclick="Display(this.value);"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="Display(this.value);"/></td>
+            <td><input type="button" value="8" onclick="Display(this.value);"/></td>
+            <td><input type="button" value="9" onclick="Display(this.value);"/></td>
+            <td><input class="operator" type="button" value="*" onclick="Display(this.value);"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" onclick="clear_display()"/></td>
+            <td><input type="button" value="0" onclick="Display(this.value);"/></td>
+            <td><input class="operator" type="button" value="=" onclick="getRes()"></td>
+            <td><input class="operator" type="button" value="/" onclick="Display(this.value);"/></td>
+        </tr>
+    </table>
+    </form>
+    <script>
+        let Res='';
+        let check = 1;
+        function Display(value) {
+            if(value >=0 && check === 0 && Res[Res.length -1] != '+'&& Res[Res.length -1] != '-'&& Res[Res.length -1] != '*'&& Res[Res.length -1] != '/'){
+                    Res='';
+                    check = 1;
+              }
+            Res += value;
+            document.getElementById('Result').textContent = Res;
+        }
+        function clear_display() {
+            Res ='';
+            document.getElementById('Result').textContent = Res;
+        }
+        function getRes() {
+            Res = eval(Res);
+            document.getElementById('Result').textContent = Res;
+            check = 0;
+        }
+    </script>
+</body>
+</html>
