@@ -2,40 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>[Bài tập] Game puzzle</title>
+    <title>Puzzle</title>
     <style>
         img {
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: 20%;
             width: 40%;
             height: 40%;
         }
-
     </style>
 </head>
 <body onload="loadImg()">
 <form id="form" style="border:5px solid white">
     <div>
-        <img src="" id="firstImg" alt="Can not load image!" onclick="nextImg('firstImg');fbingo()">
+        <img src="" id="firstImg" alt="Can not load image!" onclick="nextImg('firstImg');full_Img()">
     </div>
     <div>
-        <img src="" id="secondImg" alt="Can not load image!" onclick="nextImg('secondImg');fbingo()">
+        <img src="" id="secondImg" alt="Can not load image!" onclick="nextImg('secondImg');full_Img()">
     </div>
     <div>
-        <img src="" id="thirdImg" alt="Can not load image!" onclick="nextImg('thirdImg');fbingo()">
+        <img src="" id="thirdImg" alt="Can not load image!" onclick="nextImg('thirdImg');full_Img()">
     </div>
     <div>
-        <img src="" id="fourthImg" alt="Can not load image!" onclick="nextImg('fourthImg');fbingo()">
+        <img src="" id="fourthImg" alt="Can not load image!" onclick="nextImg('fourthImg');full_Img()">
     </div>
     <div>
-        <img src="" id="fifthImg" alt="Can not load image!" onclick="nextImg('fifthImg');fbingo()">
+        <img src="" id="fifthImg" alt="Can not load image!" onclick="nextImg('fifthImg');full_Img()">
     </div>
     <div>
-        <button id="btn" type="button" onclick="random()">Reset</button>
+        <button id="btn" type="button" onclick="random_click()">Reset</button>
+        <p id ="check"></p>
     </div>
 </form>
-
-
 <script>
     const monkey1_src = "https://demo.codegym.vn/8/puzzlegame/img/monkey_part1x1.jpg";
     const monkey2_src = "https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg";
@@ -52,111 +49,37 @@
     const cat3_src = "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg";
     const cat4_src = "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg";
     const cat5_src = "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg";
-
-    function random() {
-        let x = Math.floor(Math.random() * 10 / 3);
-        if (x === 0) {
-            x = 1;
-        }
-        return x;
-    }
-
-
-    function loadImg() {
         let src1 = monkey1_src;
         let src2 = cat2_src;
         let src3 = panda3_src;
         let src4 = cat4_src;
         let src5 = monkey5_src;
-        let r1 = random();
-        switch (r1) {
-            case 1:
-                src1 = monkey1_src;
-                break;
-            case 2:
-                src1 = cat1_src;
-                break;
-            case 3:
-                src1 = panda1_src;
-                break;
-        }
-        let r2 = random();
-        switch (r2) {
-            case 1:
-                src2 = monkey2_src;
-                break;
-            case 2:
-                src2 = cat2_src;
-                break;
-            case 3:
-                src2 = panda2_src;
-                break;
-        }
-        let r3 = random();
-        switch (r3) {
-            case 1:
-                src3 = monkey3_src;
-                break;
-            case 2:
-                src3 = cat3_src;
-                break;
-            case 3:
-                src3 = panda3_src;
-                break;
-        }
-        let r4 = random();
-        switch (r4) {
-            case 1:
-                src4 = monkey4_src;
-                break;
-            case 2:
-                src4 = cat4_src;
-                break;
-            case 3:
-                src4 = panda4_src;
-                break;
-        }
-        let r5 = random();
-        switch (r5) {
-            case 1:
-                src5 = monkey5_src;
-                break;
-            case 2:
-                src5 = cat5_src;
-                break;
-            case 3:
-                src5 = panda5_src;
-                break;
-        }
-
         document.getElementById("firstImg").src = src1;
         document.getElementById("secondImg").src = src2;
         document.getElementById("thirdImg").src = src3;
         document.getElementById("fourthImg").src = src4;
         document.getElementById("fifthImg").src = src5;
-
+    function full_Img() {
+        src1 = document.getElementById("firstImg").src;
+        src2 = document.getElementById("secondImg").src;
+        src3 = document.getElementById("thirdImg").src;
+        src4 = document.getElementById("fourthImg").src;
+        src5 = document.getElementById("fifthImg").src;
+        let check = (src1===cat1_src &&src2===cat2_src&&src3===cat3_src&&src4===cat4_src&&src5===cat5_src)
+        || (src1===panda1_src &&src2===panda2_src&&src3===panda3_src&&src4===panda4_src&&src5===panda5_src)
+        || (src1===monkey1_src &&src2===monkey2_src&&src3===monkey3_src&&src4===monkey4_src&&src5===monkey5_src);
+        if (check) {
+            function myFunction(){
+                alert('Chính xác ! Chúc mừng bạn !!!');
+            }
+            setTimeout(myFunction,300);
+        };
     }
-
-    function fbingo() {
-        let src1 = document.getElementById("firstImg").src;
-        let src2 = document.getElementById("secondImg").src;
-        let src3 = document.getElementById("thirdImg").src;
-        let src4 = document.getElementById("fourthImg").src;
-        let src5 = document.getElementById("fifthImg").src;
-        let cat_bingo = src1 == cat1_src && src2 == cat2_src && src3 == cat3_src && src4 == cat4_src && src5 == cat5_src;
-        let monkey_bingo = src1 == monkey1_src && src2 == monkey2_src && src3 == monkey3_src && src4 == monkey4_src && src5 == monkey5_src;
-        let panda_bingo = src1 == panda1_src && src2 == panda2_src && src3 == panda3_src && src4 == panda4_src && src5 == panda5_src;
-        if (cat_bingo || panda_bingo || monkey_bingo) {
-            document.getElementById("form").style.borderColor = "blue";
-        }
-    }
-
-
     function nextImg(x) {
-        let current_src = document.getElementById(x).src;
+        let index_src = document.getElementById(x).src;
         switch (x) {
             case "firstImg":
-                switch (current_src) {
+                switch (index_src) {
                     case monkey1_src:
                         document.getElementById(x).src = cat1_src;
                         break;
@@ -169,7 +92,7 @@
                 }
                 break;
             case "secondImg":
-                switch (current_src) {
+                switch (index_src) {
                     case monkey2_src:
                         document.getElementById(x).src = cat2_src;
                         break;
@@ -182,8 +105,7 @@
                 }
                 break;
             case "thirdImg":
-
-                switch (current_src) {
+                switch (index_src) {
                     case monkey3_src:
                         document.getElementById(x).src = cat3_src;
                         break;
@@ -196,8 +118,7 @@
                 }
                 break;
             case "fourthImg":
-
-                switch (current_src) {
+                switch (index_src) {
                     case monkey4_src:
                         document.getElementById(x).src = cat4_src;
                         break;
@@ -210,8 +131,7 @@
                 }
                 break;
             case "fifthImg":
-
-                switch (current_src) {
+                switch (index_src) {
                     case monkey5_src:
                         document.getElementById(x).src = cat5_src;
                         break;
@@ -223,8 +143,6 @@
                         break;
                 }
                 break;
-
-
         }
     }
 </script>
