@@ -14,19 +14,19 @@
 <body onload="loadImg()">
 <form id="form" style="border:5px solid white">
     <div>
-        <img src="" id="firstImg" alt="Can not load image!" onclick="nextImg('firstImg');full_Img()">
+        <img src="" id="Img1" alt="Can not load image!" onclick="nextImg('Img1');full_Img()">
     </div>
     <div>
-        <img src="" id="secondImg" alt="Can not load image!" onclick="nextImg('secondImg');full_Img()">
+        <img src="" id="Img2" alt="Can not load image!" onclick="nextImg('Img2');full_Img()">
     </div>
     <div>
-        <img src="" id="thirdImg" alt="Can not load image!" onclick="nextImg('thirdImg');full_Img()">
+        <img src="" id="Img3" alt="Can not load image!" onclick="nextImg('Img3');full_Img()">
     </div>
     <div>
-        <img src="" id="fourthImg" alt="Can not load image!" onclick="nextImg('fourthImg');full_Img()">
+        <img src="" id="Img4" alt="Can not load image!" onclick="nextImg('Img4');full_Img()">
     </div>
     <div>
-        <img src="" id="fifthImg" alt="Can not load image!" onclick="nextImg('fifthImg');full_Img()">
+        <img src="" id="Img5" alt="Can not load image!" onclick="nextImg('Img5');full_Img()">
     </div>
     <div>
         <button id="btn" type="button" onclick="random_click()">Reset</button>
@@ -54,17 +54,17 @@
         let src3 = panda3_src;
         let src4 = cat4_src;
         let src5 = monkey5_src;
-        document.getElementById("firstImg").src = src1;
-        document.getElementById("secondImg").src = src2;
-        document.getElementById("thirdImg").src = src3;
-        document.getElementById("fourthImg").src = src4;
-        document.getElementById("fifthImg").src = src5;
+        document.getElementById("Img1").src = src1;
+        document.getElementById("Img2").src = src2;
+        document.getElementById("Img3").src = src3;
+        document.getElementById("Img4").src = src4;
+        document.getElementById("Img5").src = src5;
     function full_Img() {
-        src1 = document.getElementById("firstImg").src;
-        src2 = document.getElementById("secondImg").src;
-        src3 = document.getElementById("thirdImg").src;
-        src4 = document.getElementById("fourthImg").src;
-        src5 = document.getElementById("fifthImg").src;
+        src1 = document.getElementById("Img1").src;
+        src2 = document.getElementById("Img2").src;
+        src3 = document.getElementById("Img3").src;
+        src4 = document.getElementById("Img4").src;
+        src5 = document.getElementById("Img5").src;
         let check = (src1===cat1_src &&src2===cat2_src&&src3===cat3_src&&src4===cat4_src&&src5===cat5_src)
         || (src1===panda1_src &&src2===panda2_src&&src3===panda3_src&&src4===panda4_src&&src5===panda5_src)
         || (src1===monkey1_src &&src2===monkey2_src&&src3===monkey3_src&&src4===monkey4_src&&src5===monkey5_src);
@@ -78,7 +78,7 @@
     function nextImg(x) {
         let index_src = document.getElementById(x).src;
         switch (x) {
-            case "firstImg":
+            case "Img1":
                 switch (index_src) {
                     case monkey1_src:
                         document.getElementById(x).src = cat1_src;
@@ -91,7 +91,7 @@
                         break;
                 }
                 break;
-            case "secondImg":
+            case "Img2":
                 switch (index_src) {
                     case monkey2_src:
                         document.getElementById(x).src = cat2_src;
@@ -104,7 +104,7 @@
                         break;
                 }
                 break;
-            case "thirdImg":
+            case "Img3":
                 switch (index_src) {
                     case monkey3_src:
                         document.getElementById(x).src = cat3_src;
@@ -117,7 +117,7 @@
                         break;
                 }
                 break;
-            case "fourthImg":
+            case "Img4":
                 switch (index_src) {
                     case monkey4_src:
                         document.getElementById(x).src = cat4_src;
@@ -130,7 +130,7 @@
                         break;
                 }
                 break;
-            case "fifthImg":
+            case "Img5":
                 switch (index_src) {
                     case monkey5_src:
                         document.getElementById(x).src = cat5_src;
