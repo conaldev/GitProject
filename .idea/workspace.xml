@@ -21,10 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="017010e9-13a2-4c23-b405-017f8587353d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/THSuKienChuot.html" beforeDir="false" afterPath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/THSuKienChuot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/appDoYouLoveMe.html" beforeDir="false" afterPath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/appDoYouLoveMe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/btUngDungChuyenDoiTienTe.html" beforeDir="false" afterPath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/btUngDungChuyenDoiTienTe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/btUngsDungMayTinh.html" beforeDir="false" afterPath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/btUngsDungMayTinh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/game-puzzle.html" beforeDir="false" afterPath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/game-puzzle.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +89,7 @@
       <workItem from="1591789594107" duration="1983000" />
       <workItem from="1591838191262" duration="1622000" />
       <workItem from="1591859613728" duration="2621000" />
+      <workItem from="1591931117199" duration="604000" />
     </task>
     <servers />
   </component>
