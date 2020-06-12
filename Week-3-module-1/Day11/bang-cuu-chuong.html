@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--Minh ConalDev-->
+    <h2 style="text-align: center;">Bảng cửu chương</h2>
+    <style>
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        table,td,tr{
+            padding: 20px;
+            border: 2px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        let display = "";
+        display+="<table>"
+        for(let row=1;row<=9;row++){
+            display+="<tr>"
+            for(let colume=2;colume<=10;colume++){
+                display+= "<td>"+colume+ "x" + row + "="+ colume*row + "</td>"; 
+            }
+            display+="</tr>";
+        }
+        display+="</table>"
+        document.write(display);
+    </script>
+</body>
+</html>
