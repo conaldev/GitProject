@@ -6,10 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <script>//By MInhConal Dev
         let numbers =+ prompt("Enter the number of primes");
         let count =0;
-        let N=2;
+        let Num=2;
         let arrayPrimeNums = [];
         function checkPrimeNum(Num){
             if(Num===2) return true;
@@ -23,15 +23,15 @@
         if(numbers>=1){ 
             arrayPrimeNums[count]=2;
             count =1;
-            N=3;
+            Num=3;
         }
         while(count<numbers){
-            if(checkPrimeNum(N)){               
-                arrayPrimeNums[count]=N;
+            if(checkPrimeNum(Num)){               
+                arrayPrimeNums[count]=Num;
                 ++count;
             } 
-            N+=2;
-        }
+            Num+=2;
+        }//By MInhConal Dev
         alert("Có " + numbers + " số nguyên tố đầu tiên là: " + arrayPrimeNums);
     </script>
 </body>
