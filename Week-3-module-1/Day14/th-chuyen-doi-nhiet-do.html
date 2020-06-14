@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <p>Type a value in the Fahrenheit to convert the value to Celcius:</p>
+    <p>Fahrenheit <input type="number" id="Fdegree" oninput="convertDegree(this.value)" onchange="convertDegree(this.value)" /></p>
+    <p>Celcius: <span id = "Cdegree"></span></p>
+    <script>
+        function convertDegree(Fdegree) {
+            document.getElementById("Cdegree").textContent= (Fdegree -32)/1.8;
+        }
+    </script>
+</body>
+</html>
