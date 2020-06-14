@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers =+ prompt("Enter the number of primes");
+        let count =0;
+        let N=2;
+        let arrayPrimeNums = [];
+        function checkPrimeNum(Num){
+            if(Num===2) return true;
+            else{
+                for(let subNum =2; subNum<=Math.sqrt(Num); subNum ++){
+                    if(Num%subNum===0) return false;
+                }
+                return true;
+            }
+        }
+        if(numbers>=1){ 
+            arrayPrimeNums[count]=2;
+            count =1;
+            N=3;
+        }
+        while(count<numbers){
+            if(checkPrimeNum(N)){               
+                arrayPrimeNums[count]=N;
+                ++count;
+            } 
+            N+=2;
+        }
+        alert("Có " + numbers + " số nguyên tố đầu tiên là: " + arrayPrimeNums);
+    </script>
+</body>
+</html>
