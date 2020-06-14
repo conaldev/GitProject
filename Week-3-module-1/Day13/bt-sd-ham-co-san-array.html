@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Bài 1: myColor = ["Red", "Green", "White", "Black"]</p>
+    <input type ="button" onclick="joinArray()" value ="click me" />
+    <p>Bài 2: thêm "-" vào giữa các số chẵn</p>
+    <input type ="button" onclick="addBetweenEvenNumbers()"  value ="click me" />
+    <p>Bài 3: nhập vào một chuỗi và chuyển các ký tự thường => hoa và ngược lại</p>
+    <input type ="button" onclick="convertString()"  value ="click me" />
+    <script>
+        function joinArray() {
+            let myColor = ["Red", "Green", "White", "Black"];
+            myColor.join();
+            alert(myColor);
+        }
+        function isEven(num){
+            if(num%2===0) return true;
+            else return false;
+        }
+        function addBetweenEvenNumbers() {
+            let str = prompt("Enter a number");
+            let result = [str[0]];
+            for (let x = 1; x < str.length; x++) {
+            if (str[x - 1] % 2 === 0 && str[x] % 2 === 0) {
+                result.push('-', str[x]);
+            } else {
+                result.push(str[x]);
+            }
+            }
+            alert(result.join(''));
+        }
+        function convertString() {
+            let str = prompt("Enter a string to convert");
+            let result = [];
+            
+            for(let x=0; x<str.length; x++)
+            {
+                if(str[x]>='A' && str[x]<='Z')
+                {
+                    result.push(str[x].toLowerCase());
+                }
+                else if(str[x]>='a' && str[x]<='z')
+                {
+                    result.push(str[x].toUpperCase());
+                }
+                else 
+                {
+                    result.push(str[x]);
+                }
+            }
+            alert(result.join(''));
+
+        }
+    </script>
+</body>
+</html>
