@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><!-- MinhDDS -->  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bt</title>
 </head>
 <body>
-    <h1>Type anthing slowly</h1>
+    <h1 style="text-align: center;">Type anthing slowly</h1>
     <!-- MinhDDS -->    
-    <textarea id ="text" rows = "10" cols = "50" autofocus onkeypress="fakingTextarea()"></textarea>
+    <textarea style="display: block; margin-left: auto;margin-right: auto;" id ="text" rows = "10" cols = "50" autofocus onkeypress="fakingTextarea()"></textarea>
     <script>
         let fakeText= "I am a super stupid human !!"
         let runFake = "";
@@ -26,7 +26,8 @@
             document.getElementById("text").value = runFake;
             runFake = "";
             setTimeout("fakingTextarea()", 1);
-        }
+        } 
     </script>
+    <!-- MinhDDS -->  
 </body>
 </html>
