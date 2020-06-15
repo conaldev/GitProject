@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--MinhConalDev-->
+    <h4>Bài 1: Dùng loop đếm 1-100. Khi số 99 display box hoàn thành</h4>
+    <input type ="button" onclick = "countNumbers()" value="click me" />
+    <h4>Bài 2: Nhập nhiệt độ theo yêu cầu</h4>
+    <input type ="button" onclick = "inputDegree()" value="click me" />
+    <h4>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên</h4><!--MinhConalDev-->
+    <input type ="button" onclick = "displayFibonacci()" value="click me"/>
+    <h4>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5</h4>
+    <input type ="button" onclick = "firstFiboDivisible5()" value="click me"/>
+    <h4>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci</h4>
+    <input type ="button" onclick = "sum20FirstFibo()" value="click me"/>
+    <h4>Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên</h4>
+    <input type ="button" onclick = "sumFirst30Divisible7()" value="click me"/>
+    <h4>Bài 7: In ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó.
+         Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz"</h4><!--MinhConalDev-->
+    <input type ="button" onclick = "FizzBuzz()" value="click me"/>
+    <p id ="output"></p>
+    <h4>Bài 8: Game đoán số</h4>
+    <input type ="button" onclick = "tryGuessNumber()" value="Chơi"/>
+    <script>
+        function countNumbers() {
+            for (let num =1;num<=100;++num){
+                if(num ===99) alert("num = " + num + " đã hoàn thành");
+                else {
+                    alert("num = " + num);
+                }
+            }
+        }
+        function inputDegree() {
+            let degree =+ prompt("Enter a degree number");
+            while(degree<20) {
+                degree =+ prompt("Increase degree number");
+            }
+            while(degree>100) {
+                degree =+ prompt("Decrease degree number");
+            }
+            alert("Currently, The degree is " + degree);
+        }
+        function displayFibonacci() {
+            let fibo = [];
+            fibo[0] = 0;
+            fibo[1] =1;
+            for( let index =2;index<20;index++) {
+                fibo[index] = fibo[index-1] + fibo[index-2];
+            }
+            alert("20 so fibonacci dau tien la: " + fibo);
+        }
+        function firstFiboDivisible5() {
+            let fibo = [];
+            fibo[0] = 0;
+            fibo[1] =1;
+            for( let index =2;index<20;index++) {
+                fibo[index] = fibo[index-1] + fibo[index-2];
+                if(fibo[index]%5 === 0){ 
+                    alert("Số fibonacci đầu tiên chia hết cho 5 là " + fibo[index]);
+                    break;
+                }
+            }
+        }
+        function sum20FirstFibo() {
+            let fibo = [];
+            fibo[0] = 0;
+            fibo[1] =1;
+            let sum =1;
+            for( let index =2;index<20;index++) {
+                fibo[index] = fibo[index-1] + fibo[index-2];
+                sum += fibo[index];
+            }
+            alert("Tổng 20 số đầu tiên dãy fibonacci = " + sum);
+        }
+        function sumFirst30Divisible7() {
+            let sum=0;
+            let num =0;
+            for( let index =1;index<30;index++){
+                sum += num; 
+                num+=7;
+            }
+            alert("Tổng 30 số tự nhiên chia hết cho 7 đầu tiên là: " + sum);
+        }
+        function FizzBuzz () {
+            let display = "";
+            for(let num =1;num<=100;++num) {
+                if(num%3===0 && num%5===0) display+="FizzBuzz ";
+                else if(num%5===0) display+="Buzz ";
+                else if(num%3===0) display+="Fizz ";
+                else display+=num + " ";
+            }
+            alert(display);
+        }
+        function tryGuessNumber() {
+            let minNum =+ prompt("Enter a minimum Number");
+            let maxNum =+ prompt("Enter a maximum Number");
+            let randNum = Math.floor(Math.random() * (maxNum-minNum+1) + minNum);
+            let chooseNum = 0;
+            do {
+            chooseNum =+ prompt("Try Guess A Number");
+            if(chooseNum===randNum) alert("Correct! Chúc mừng!!");
+            else alert("Wrong! You Lose!");  
+            } while(chooseNum!=randNum);
+        }
+
+    </script>
+    <!--MinhConalDev-->
+</body>
+</html>
