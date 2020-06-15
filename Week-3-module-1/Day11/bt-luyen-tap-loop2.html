@@ -14,9 +14,9 @@
     <h4>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</h4><!--MinhConalDev-->
     <input type ="button" onclick = "printRightTriangle()" value="click me"/>
     <h4>Bài 4:  In hình chữ nhật</h4>
-    <input type ="button" onclick = "firstFiboDivisible5()" value="click me"/>
+    <input type ="button" onclick = "drawRectangle()" value="click me"/>
     <h4>Bài 5: In hình trái tim</h4>
-    <input type ="button" onclick = "" value="click me"/> <br>
+    <input type ="button" onclick = "drawHeart()" value="click me"/> <br>
     <div id ="output"></div>
     <script>
         function printFibo() {
@@ -71,17 +71,57 @@
           }
           function drawRectangle() {
               let Rectangle = "";
-              for(let i=1;i<=7;++i) {
-                  Rectangle+="*";
-                  if(i===1 || i===21){
-                      for(let j=2;j<=21;j++) {
-                          Rectangle+="*";
-                      }
-                  }
-                  Rectangle+="<br><br>"
-              }
+              for (let i = 0; i <= 7; i++) {
+                    if (i == 0 || i == 7) {
+                        for (let j = 0; j <= 21; j++) {
+                            Rectangle += '*';
+                        }
+                    } else {
+                        Rectangle += '*';
+                        for (let j = 2; j <= 21; j++) {
+                            Rectangle += '&nbsp&nbsp';
+                        }
+                        Rectangle += '*';
+                    }
+                    Rectangle += '<br>';
+            }
+
               document.getElementById("output").innerHTML = Rectangle;
           }
+          function drawHeart() {
+            let i, j, k, Heart='';
+            for (i=0; i<3; i++) {
+                for (j=1; j<(4-i); j++) {
+                    Heart += '&nbsp;&nbsp;';
+                }
+                for (j=0; j<(2*i+3); j++) {
+                    Heart += '*';
+                }
+                for (j=0; j<(8-2*i);j++) {
+                    Heart += '&nbsp;&nbsp;';
+                }
+                for (j=0; j<(2*i+3); j++) {
+                    Heart += '*';
+                }
+                Heart += '<br>';
+            }
+            for (i=0; i<3; i++) {
+                for (j=0; j<20; j++) {
+                    Heart += '*';
+                }
+                Heart += '<br>';
+            }
+            for (i=0; i<5; i++) {
+                for (j=0; j<(2*i+1); j++) {
+                    Heart += '&nbsp;&nbsp;';
+                }
+                for (j=0; j<(18-4*i);j++) {
+                    Heart += '*';
+                }
+                Heart += '<br>';
+            }
+            document.getElementById("output").innerHTML = Heart;
+        }
     </script>
 </body>
 </html>
