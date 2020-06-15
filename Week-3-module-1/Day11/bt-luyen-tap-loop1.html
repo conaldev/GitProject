@@ -100,11 +100,14 @@
             let maxNum =+ prompt("Enter a maximum Number");
             let randNum = Math.floor(Math.random() * (maxNum-minNum+1) + minNum);
             let chooseNum = 0;
+            let count =3;
             do {
-            chooseNum =+ prompt("Try Guess A Number");
+            chooseNum =+ prompt("Try Guess A Number. You have " + count + " times");
             if(chooseNum===randNum) alert("Correct! Chúc mừng!!");
-            else alert("Wrong! You Lose!");  
-            } while(chooseNum!=randNum);
+            else alert("Wrong!");
+            --count;
+            if(count==0) alert("YOU LOSE!!!")  ;
+            } while(chooseNum!=randNum && count >0)
         }
 
     </script>

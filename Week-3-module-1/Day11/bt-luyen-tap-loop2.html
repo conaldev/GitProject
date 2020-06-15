@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 2</title>
+</head>
+<body>
+    <!--MinhConalDev-->
+    <h4>Bài 1: In dãy Fibonacci</h4>
+    <input type ="button" onclick = "printFibo()" value="click me" />
+    <h4>Bài 2: Tính giai thừa của một số nguyên dương</h4>
+    <input type ="button" onclick = "factorialOfANumber()" value="click me" />
+    <h4>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</h4><!--MinhConalDev-->
+    <input type ="button" onclick = "printRightTriangle()" value="click me"/>
+    <h4>Bài 4:  In hình chữ nhật</h4>
+    <input type ="button" onclick = "firstFiboDivisible5()" value="click me"/>
+    <h4>Bài 5: In hình trái tim</h4>
+    <input type ="button" onclick = "" value="click me"/> <br>
+    <div id ="output"></div>
+    <script>
+        function printFibo() {
+            let amount =+ prompt("Số lượng Fibo cần in")
+            let fibo = [];
+            fibo[0] = 0;
+            fibo[1] =1;
+            for( let index =2;index<amount;index++) {
+                fibo[index] = fibo[index-1] + fibo[index-2];
+            }
+            alert(amount+" so fibonacci dau tien la: " + fibo);
+        }
+        function recursiveFactorial(num) {
+            if(num===1) return 1;
+            else return num*recursiveFactorial(num-1);
+        }
+        function factorialOfANumber() {
+            let num =+ prompt("Enter a number to calculate factorial");
+            let display = recursiveFactorial(num);
+            alert("Giai thừa của " + num + " là " + display);
+        }
+        function printRightTriangle() {
+              let RightTriangle = "";
+              for (let i = 1; i <= 5; i++) {
+                  for (let j = 1; j <= i; j++) {
+                      RightTriangle += "*";
+                  }
+                  RightTriangle += "<br>";
+              }
+              RightTriangle +="<br>";
+              for (i = 5; i >= 1; i--) {
+                  for (j = 1; j <= i; j++) {
+                      RightTriangle += "*";
+                  }
+                  RightTriangle += "<br>";
+              }
+              RightTriangle +="<br>";
+              for (j = 1; j <= 5; j++) {
+                  for (i = 1; i <= j; i++) {
+                      RightTriangle += "*";
+                  }
+                  RightTriangle +="<br>";
+              }
+              RightTriangle += "<br>";
+              for (j = 5; j >= 1; j--) {
+                  for (i = 1; i <= j; i++) {
+                      RightTriangle += "*";
+                  }
+                  RightTriangle += "<br>";
+              }
+              document.getElementById("output").innerHTML = RightTriangle;
+          }
+          function drawRectangle() {
+              let Rectangle = "";
+              for(let i=1;i<=7;++i) {
+                  Rectangle+="*";
+                  if(i===1 || i===21){
+                      for(let j=2;j<=21;j++) {
+                          Rectangle+="*";
+                      }
+                  }
+                  Rectangle+="<br><br>"
+              }
+              document.getElementById("output").innerHTML = Rectangle;
+          }
+    </script>
+</body>
+</html>

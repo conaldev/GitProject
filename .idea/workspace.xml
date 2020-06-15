@@ -50,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/index.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Untitled-1.html" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
@@ -97,6 +97,7 @@
       <workItem from="1592135935982" duration="28000" />
       <workItem from="1592144997573" duration="64000" />
       <workItem from="1592178094963" duration="317000" />
+      <workItem from="1592205228831" duration="605000" />
     </task>
     <servers />
   </component>
@@ -128,10 +129,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1591861023902" />
-    <state x="1223" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1592145024032">
+    <state x="1223" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1592205249152">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="1223" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1592145024032" />
+    <state x="1223" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1592205249152" />
     <state width="1897" height="340" key="GridCell.Tab.0.bottom" timestamp="1591867809141">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
