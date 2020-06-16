@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Exercise 1] Array 1</title>
+</head>
+<body>
+<div>
+    <h4>Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có
+        bao nhiêu số nguyên lớn hơn hoặc bằng 10.</h4>
+    <div id="scr1"></div>
+    <button type="button" onclick="exercise1()">RUN</button>
+</div>
+<hr>
+
+
+<h4>Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có
+    giá trị lớn nhất trong mảng và vị trí của phần tử đó.</h4>
+<div id="scr2"></div>
+<button type="button" onclick="exercise2()">RUN</button>
+</div>
+<hr>
+
+
+<h4>Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình
+    của các phần tử trong mảng.</h4>
+<div id="scr3"></div>
+<button type="button" onclick="exercise3()">RUN</button>
+</div>
+<hr>
+
+
+<h4>Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</h4>
+<div id="scr4"></div>
+<button type="button" onclick="exercise4()">RUN</button>
+</div>
+<hr>
+
+
+<h4>Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi</h4>
+<div id="scr5"></div>
+<button type="button" onclick="exercise5()">RUN</button>
+</div>
+<hr>
+
+
+<h4>Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương
+    trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại
+    in ra "V is not in the array".</h4>
+<div id="scr6"></div>
+<button type="button" onclick="exercise6()">RUN</button>
+</div>
+<hr>
+
+
+<h4>Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương
+    trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây
+    tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)</h4>
+<div id="scr7"></div>
+<button type="button" onclick="exercise7()">RUN</button>
+</div>
+<hr>
+
+
+<h4>Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự
+    giảm dần và hiển thị ra mảng đã được sắp xếp.</h4>
+<div id="scr8"></div>
+<button type="button" onclick="exercise8()">RUN</button>
+</div>
+<hr>
+
+
+<h4>Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng
+    được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển
+    thị mảng c.</h4>
+<div id="scr9"></div>
+<button type="button" onclick="exercise9()">RUN</button>
+</div>
+<hr>
+
+
+<script>
+    function exercise1() {
+        let arr = [];
+        let count = 0;
+        let text = '';
+        for (let i = 1; i <= 10; i++) {
+            let value =+prompt('Nhap vao so nguyen thu ' + i);
+            arr.push(value);
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] >= 10) {
+                text += arr[i] + ' | ';
+                count++;
+            }
+        }
+        alert('Tong cong co ' + count + ' phan tu co gia tri >=10' + text);
+        
+    }
+
+    function exercise2() {
+        let arr = [];
+        for (let i = 1; i <= 10; i++) {
+            let value =+prompt('Nhap vao so nguyen thu ' + i);
+            arr.push(value);
+        }
+        let max_value = arr[0];
+        let max_index = 0;
+        for (let i = 1; i < arr.length; i++) {
+            if (max_value < arr[i]) {
+                max_value = arr[i];
+                max_index = i;
+            }
+        }
+        alert('Gia tri lon nhat trong mang la: ' + max_value + ' tai vi tri: ' + max_index);
+    }
+
+    function exercise3() {
+        let arr = [];
+        for (let i = 1; i <= 10; i++) {
+            let value =+prompt('Nhap vao so nguyen thu ' + i);
+            arr.push(value);
+        }
+        let max_value = arr[0];
+        let max_index = 0;
+        let sum = 0;
+        for (let i = 1; i < arr.length; i++) {
+            if (max_value < arr[i]) {
+                max_value = arr[i];
+                max_index = i;
+            }
+            sum += arr[i];
+        }
+       alert('Gia tri lon nhat trong mang la: ' + max_value + ' tai vi tri: ' + max_index +
+            '. Gia tri trung binh cua mang: ' + sum / arr.length);
+
+    }
+
+    function exercise4() {
+        let arr = [];
+        for (let i = 1; i <= 10; i++) {
+            let value =+prompt('Nhap vao so nguyen thu ' + i);
+            arr.push(value);
+        }
+        alert("mảng đảo ngược là" + arr.reverse());
+    }
+    function exercise5() {
+        let arr = [];
+        let text = "";
+        for (let i = 1; i <= 5; i++) {
+            let value =+prompt('Nhap vao so nguyen thu ' + i);
+            arr.push(value);
+        }
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                text += arr[i] +"|";
+                count++;
+            }
+        }
+        alert('Co tat ca ' + count + ' so nguyen am trong mang: ' + text);
+    }
+
+    function exercise6() {
+        let arr = [];
+        for (let i = 1; i <= 10; i++) {
+            let value =+prompt('Nhap vao so nguyen thu ' + i);
+            arr.push(value);
+        }
+        let v =+prompt('Nhap vao so nguyen bat ky');
+        let isExist = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (v == arr[i]) {
+                isExist = true;
+            }
+        }
+        if (isExist) {
+            alert(v + ' is in the array.');
+        } else {
+            alert(v + ' is not in the array.');
+        }
+
+    }
+
+    function exercise7() {
+        let arr = [];
+        let j;//ConalDev
+        for(let i=0;i<10;++i) {
+            j=i+1;
+            arr[i] =+ prompt("Nhap phan tu thu " + j);
+        }
+        let number =+ prompt("Nhap so can tim trong mang");
+        function checkNum(num){
+            let index = -1;
+            for(let i=0;i<arr.length;++i) {
+                if(num===arr[i]){
+                index=i;
+                break;
+                }
+            }
+            return index;
+        }
+        //ConalDev
+        function deleteElementInArray(arr,index) {
+            for(let i = index;i<arr.length-1;++i){
+                    arr[i]=arr[i+1];
+            }
+            arr[arr.length -1] =0;
+            return arr;
+            }
+        let index1 = checkNum(number);
+        alert(deleteElementInArray(arr,index1));
+    }
+
+    function exercise8() {
+        let arr = [];
+        for (let i = 0; i < 10; i++) {
+            let k=i+1;
+            let value =+prompt('Nhap vao so nguyen thu ' + k);
+            arr.push(value);
+        }
+        let indexMin;//selectionSort
+        for(let i=0;i<arr.length-1;i++){
+            indexMin=i;
+            for(let j=i+1;j<arr.length;++j){
+                if(arr[indexMin]<arr[j])
+                    indexMin=j;
+            }//ConalDev
+            let temp = arr[i];
+                arr[i]=arr[indexMin];
+                arr[indexMin]=temp;
+        }
+        // C2:arr.sort(function (a, b) {
+        //     return b - a
+        // });
+        alert(arr);
+    }
+
+    function exercise9() {
+        let arrA = [];
+        for (let i = 1; i <= 10; i++) {
+            let value =+prompt('Nhap vao so nguyen thu ' + i);
+            arrA.push(value);
+        }
+        let arrB = [];
+        for (let i = 1; i <= 10; i++) {
+            let value =+prompt('Nhap vao so nguyen thu ' + i);
+            arrB.push(value);
+        }
+        let arrC = new Array(arrA.length + arrB.length);
+        for (let i = 0; i < arrC.length; i++) {
+            if (i < arrA.length) {
+                arrC[i] = arrA[i];
+            } else {
+                arrC[i] = arrB[i - arrA.length];
+            }
+        }
+        alert("mang C la " + arrC);
+    }
+</script>
+</body>
+</html>

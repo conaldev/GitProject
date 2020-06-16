@@ -70,7 +70,7 @@
             fibo[0] = 0;
             fibo[1] =1;
             let sum =1;
-            for( let index =2;index<20;index++) {
+            for( let index =2;index<18;index++) {
                 fibo[index] = fibo[index-1] + fibo[index-2];
                 sum += fibo[index];
             }
@@ -78,7 +78,7 @@
         }
         function sumFirst30Divisible7() {
             let sum=0;
-            let num =0;
+            let num =7;
             for( let index =1;index<30;index++){
                 sum += num; 
                 num+=7;

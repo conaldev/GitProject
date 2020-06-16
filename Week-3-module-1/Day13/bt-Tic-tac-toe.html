@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h3 style="text-align: center;">Tic Tac Toe</h3>
-    <b><p id="boardDis" style="text-align: center;"></p></b><br>
-    <button style="margin: auto;display: block;" onclick="changeValue()">X or O</button>
+    <h3>Tic Tac Toe</h3>
+    <b><p id="boardDis" ></p></b><br>
+    <button onclick="changeValue()">Play</button>
     <script>//conaldev
         let display = "";
         let board = [];
@@ -43,29 +43,51 @@
             return 10;
         }
 //ConalDev
+        let turnX=true;
         function changeValue() {
             let choose="";
-            while(choose!="X" && choose!="x" && choose!="o"  && choose!="O"){
-                choose = prompt("X or O");
-            }
-            let positionX =+ prompt("X coordinate: ");
-            let positionY =+ prompt("Y coordinate: ");
-            display = "";
-            if(choose=="x" || choose=="X")
-            board[positionX][positionY] = "x";
-            else board[positionX][positionY] = "o";
-
-            for (let i = 0; i < 3; i++) {
-                display += "<br/>";
-                for (let j = 0; j < 3; j++) {
-                    display += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            let result = 10;
+            let positionX;
+            let positionY;
+                if(turnX==true){
+                    alert("turn X");
+                    positionX =+ prompt("X coordinate: ");
+                    positionY =+ prompt("Y coordinate: ");
+                    display = "";
+                    board[positionX][positionY] = "x";
+                    for (let i = 0; i < 3; i++) {
+                        display += "<br/>";
+                        for (let j = 0; j < 3; j++) {
+                            display += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                        }
+                    }//MinhConal
+                    document.getElementById("boardDis").innerHTML=display;
+                    turnX=false;
                 }
-            }//MinhConal
-            document.getElementById("boardDis").innerHTML =display;
-            let result = checkWin(board);
-            if(result=="x") alert("X Win ! O Lose!");
-            else if(result =="o") alert("O Win ! X Lose!");
-        }
+                else {
+                    
+                    alert("turn O");
+                    positionX =+ prompt("X coordinate: ");
+                    positionY =+ prompt("Y coordinate: ");
+                    display = "";
+                    board[positionX][positionY] = "o";
+                    for (let i = 0; i < 3; i++) {
+                        display += "<br/>";
+                        for (let j = 0; j < 3; j++) {
+                            display += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                        }
+                    }//MinhConal
+                    document.getElementById("boardDis").innerHTML =display;
+                    turnX=true;
+                }
+                result = checkWin(board);
+                if(result=="x") {
+                    setTimeout(function(){ alert("X Win ! O Lose!"); }, 500);
+                }
+                else if(result =="o") {
+                    setTimeout(function(){ alert("O Win ! X Lose!"); }, 500);
+                } 
+         }
     </script>
 </body>
 </html>
