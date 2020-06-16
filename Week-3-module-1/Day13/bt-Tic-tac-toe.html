@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><!--ConalDev-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -9,7 +9,7 @@
     <h3 style="text-align: center;">Tic Tac Toe</h3>
     <b><p id="boardDis" style="text-align: center;"></p></b><br>
     <button style="margin: auto;display: block;" onclick="changeValue()">X or O</button>
-    <script>
+    <script>//conaldev
         let display = "";
         let board = [];
         for(let i=0;i<3;i++) {
@@ -22,7 +22,7 @@
             }
         }
         document.getElementById("boardDis").innerHTML = display;
-
+        //conaldev
         function checkWin(arr){
             let j=0;
             for(let i=0;i<3;++i){
@@ -42,7 +42,7 @@
 
             return 10;
         }
-
+//ConalDev
         function changeValue() {
             let choose="";
             while(choose!="X" && choose!="x" && choose!="o"  && choose!="O"){
@@ -60,7 +60,7 @@
                 for (let j = 0; j < 3; j++) {
                     display += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
                 }
-            }
+            }//MinhConal
             document.getElementById("boardDis").innerHTML =display;
             let result = checkWin(board);
             if(result=="x") alert("X Win ! O Lose!");
