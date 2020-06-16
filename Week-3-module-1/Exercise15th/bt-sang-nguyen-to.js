@@ -4,9 +4,9 @@ function primeNums(Num) {
     for (let i=2;i<=Num;++i) {
         check[i] = true;
     }//ConalDev
-    for (let i = 2; i <= Num; i++) {
+    for (let i = 2; i*i <= Num; i++) {
         if (check[i] === true) {
-          for (let j = i*2; j <= Num; j += i) {
+          for (let j = i*i; j <= Num; j += i) {
             check[j] = false;
           }
         }

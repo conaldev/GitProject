@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 style="text-align: center;">Tic Tac Toe</h3>
+    <b><p id="boardDis" style="text-align: center;"></p></b><br>
+    <button style="margin: auto;display: block;" onclick="changeValue()">X or O</button>
+    <script>
+        let display = "";
+        let board = [];
+        for(let i=0;i<3;i++) {
+            board[i] = new Array(".",".",".");
+        }
+        for (let i = 0; i < 3; i++) {
+            display += "<br/>";
+            for (let j = 0; j < 3; j++) {
+                display += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        document.getElementById("boardDis").innerHTML = display;
+
+        function checkWin(arr){
+            let j=0;
+            for(let i=0;i<3;++i){
+                    if(arr[i][j] =="x" && arr[i][j+1]=="x" && arr[i][j+2] =="x")
+                    return "x";
+                    else if(arr[i][j] =="o" && arr[i][j+1] =="o" && arr[i][j+2] =="o")
+                    return "o";
+                    else if(arr[j][i] =="x" &&arr[j+1][i] =="x" &&arr[j+2][i] =="x")
+                    return "x";
+                    else if(arr[j][i] =="o" &&arr[j+1][i] =="o" &&arr[j+2][i] =="o")
+                    return "o";
+            }
+            if(arr[0][0] =="x" &&arr[1][1] == "x" && arr[2][2]=="x") return "x";
+            else if(arr[0][0] =="o" &&arr[1][1] =="o" && arr[2][2] == "o") return "o";
+            else if(arr[0][2] =="x" &&arr[1][1] == "x" && arr[2][0] == "x") return "x";
+            else if(arr[0][2] =="o" &&arr[1][1] =="o" && arr[2][0] =="o") return "o";
+
+            return 10;
+        }
+
+        function changeValue() {
+            let choose="";
+            while(choose!="X" && choose!="x" && choose!="o"  && choose!="O"){
+                choose = prompt("X or O");
+            }
+            let positionX =+ prompt("X coordinate: ");
+            let positionY =+ prompt("Y coordinate: ");
+            display = "";
+            if(choose=="x" || choose=="X")
+            board[positionX][positionY] = "x";
+            else board[positionX][positionY] = "o";
+
+            for (let i = 0; i < 3; i++) {
+                display += "<br/>";
+                for (let j = 0; j < 3; j++) {
+                    display += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                }
+            }
+            document.getElementById("boardDis").innerHTML =display;
+            let result = checkWin(board);
+            if(result=="x") alert("X Win ! O Lose!");
+            else if(result =="o") alert("O Win ! X Lose!");
+        }
+    </script>
+</body>
+</html>
