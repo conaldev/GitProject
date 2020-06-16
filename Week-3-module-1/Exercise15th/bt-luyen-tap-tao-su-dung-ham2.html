@@ -1,0 +1,215 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 02</title>
+    <style>
+    </style>
+</head>
+
+<body>
+<div>
+    <h4>Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</h4>
+    <div id="scr1"></div>
+    <button type="button" onclick="bai1()">RUN</button>
+    <hr>
+</div>
+
+
+<div>
+    <h4>Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</h4>
+    <div id="scr2"></div>
+    <button type="button" onclick="bai2()">RUN</button>
+    <hr>
+</div>
+
+
+<div>
+    <h4>Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</h4>
+    <div id="scr3"></div>
+    <button type="button" onclick="bai3()">RUN</button>
+    <hr>
+</div>
+
+
+<div>
+    <h4>Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược
+        lại trả về false.</h4>
+    <div id="scr4"></div>
+    <button type="button" onclick="bai4()">RUN</button>
+    <hr>
+</div>
+
+
+<div>
+    <h4>Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</h4>
+    <div id="scr5"></div>
+    <button type="button" onclick="bai5()">RUN</button>
+    <hr>
+</div>
+
+
+<div>
+    <h4>Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương
+        trả về true, ngược lại trả về false.</h4>
+    <div id="scr6"></div>
+    <button type="button" onclick="bai6()">RUN</button>
+    <hr>
+</div>
+
+
+<div>
+    <h4>Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</h4>
+    <div id="scr7"></div>
+    <button type="button" onclick="bai7()">RUN</button>
+    <hr>
+</div>
+
+
+<div>
+    <h4>Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</h4>
+    <div id="scr8"></div>
+    <button type="button" onclick="bai8()">RUN</button>
+    <hr>
+</div>
+
+
+<div>
+    <h4>Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng
+        không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.</h4>
+    <div id="scr9"></div>
+    <button type="button" onclick="bai9()">RUN</button>
+    <hr>
+</div>
+
+
+<script>
+    function bai1() {
+        let number = parseInt(prompt('Nhap so nguyen bat ky'));
+        document.getElementById('scr1').innerText = square(number);
+    }
+
+    function square(number) {
+        return number * number;
+    }
+
+    function circle_area(radius) {
+        return radius * radius * 3.14;
+    }
+
+    function circle_perimeter(radius) {
+        return radius * 2 * 3.14;
+    }
+
+    function bai2() {
+        let radius = parseInt(prompt('Nhap ban kinh hinh tron'));
+        document.getElementById('scr2').innerHTML = 'Dien tich hinh tron: ' + circle_area(radius) + '<br> Chu vi hinh tron: ' + circle_perimeter(radius);
+
+    }
+
+    function factorial(number) {
+        if(number<=1) return 1;
+        return number*factorial(number-1);
+
+    }
+
+    function bai3() {
+        let value = parseInt(prompt('Nhap vao so nguyen bat ky'));
+        alert(factorial(value));
+
+    }
+
+
+    function check_isNumber(number) {
+        return !isNaN(parseFloat(number));
+    }
+
+    function bai4() {
+        let value = prompt('Nhap vao so bat ky');
+        if (check_isNumber(value)) {
+            document.getElementById('scr4').innerText = value + ' la mot so';
+        } else {
+            document.getElementById('scr4').innerText = value + ' khong phai la so';
+        }
+    }
+
+
+    function min(a, b, c) {
+        let min = a;
+        if (a < b) {
+            if (a < c) {
+                min = a;
+            } else {
+                min = c;
+            }
+        }
+        if (b < c) {
+            min = b;
+        } else {
+            min = c;
+        }
+        return min;
+
+    }
+
+    function bai5() {
+        let a = parseFloat(prompt('Nhap vao so a'));
+        let b = parseFloat(prompt('Nhap vao so b'));
+        let c = parseFloat(prompt('Nhap vao so c'));
+        document.getElementById('scr5').innerText = min(a, b, c);
+
+    }
+
+
+    function check_isPositiveInt(number) {
+        let result = false;
+        if (number % 1 === 0 && number >= 0) {
+            result = true;
+        }
+        return result;
+    }
+
+    function bai6() {
+        let value = parseFloat(prompt('Nhap vao mot so bat ky'));
+        document.getElementById('scr6').innerText = check_isPositiveInt(value);
+
+    }
+
+    function bai7() {
+        let a = parseInt(prompt('Nhap vao so nguyen thu 1'));
+        let b = parseInt(prompt('Nhap vao so nguyen thu 2'));
+        let temp_value = a;
+        a = b;
+        b = temp_value;
+        document.getElementById('scr7').innerHTML = 'So nguyen thu nhat: ' + a + '<br> So nguyen thu hai: ' + b;
+    }
+
+    function bai8() {
+        let arr = [];
+        for (let i = 0; i < 5; i++) {
+            let value = parseInt(prompt('Nhap vao phan tu thu ' + i + ' cua mang:'));
+            arr.push(value);
+        }
+        arr.reverse();
+        document.getElementById('scr8').innerText = arr;
+    }
+
+        function bai9() {
+            let str = prompt('Nhap vao mang ky tu bat ky');
+            let count = 0;
+            let char = prompt('Nhap vao ky tu bat ky').substr(0, 1);
+            for (let i = 0; i < str.length; i++) {
+                if (char == str[i]) {
+                    count++;
+                }
+            }
+            document.getElementById('scr9').innerHTML = 'Ky tu <b>' + char + ' </b> xuat hien ' + count + ' lan.'
+
+        }
+
+
+</script>
+
+</body>
+</html>
