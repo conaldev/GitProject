@@ -221,24 +221,43 @@
         alert(deleteElementInArray(arr,index1));
     }
 
-    function exercise8() {
+    function exercise8() {//conaldev
         let arr = [];
         for (let i = 0; i < 10; i++) {
             let k=i+1;
             let value =+prompt('Nhap vao so nguyen thu ' + k);
             arr.push(value);
         }
-        let indexMin;//selectionSort
-        for(let i=0;i<arr.length-1;i++){
-            indexMin=i;
-            for(let j=i+1;j<arr.length;++j){
-                if(arr[indexMin]<arr[j])
-                    indexMin=j;
-            }//ConalDev
-            let temp = arr[i];
-                arr[i]=arr[indexMin];
-                arr[indexMin]=temp;
+        // let indexMin;//selectionSort good + bad + avarage = O(n^2);
+        // for(let i=0;i<arr.length-1;i++){
+        //     indexMin=i;
+        //     for(let j=i+1;j<arr.length;++j){
+        //         if(arr[indexMin]<arr[j])
+        //             indexMin=j;
+        //     }//ConalDev
+        //     let temp = arr[i];
+        //         arr[i]=arr[indexMin];
+        //         arr[indexMin]=temp;
+        // }
+        // C3:bubble sort 
+        // good O(n)
+        // average O(n^2)
+        // bad O(n^2)
+
+        for(let i=0;i<n-1;++i) {
+            let checkSort = false;
+            for(let j=0;j<n-i-1;++j){
+                if(arr[j]<arr[j+1]) {
+                    let temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] =temp;
+                        checkSort=true;
+                }
+            }
+            if(checkSort===false) break;
         }
+        
+
         // C2:arr.sort(function (a, b) {
         //     return b - a
         // });

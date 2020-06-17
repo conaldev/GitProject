@@ -6,9 +6,9 @@ let str3="osjfoeiwnbo"
 function isPalindrome(stringInput,first,last) {
     if(first<last){
         if(stringInput[first]!=stringInput[last])
-            return false;
+            return false;//conaldev
         ++first;
-        --last;
+        --last;//conaldev
         return isPalindrome(stringInput,first,last);
     }
     else return true;
