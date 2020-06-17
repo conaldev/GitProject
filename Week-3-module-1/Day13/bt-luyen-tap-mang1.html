@@ -90,29 +90,37 @@
         }
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] >= 10) {
-                text += arr[i] + ' | ';
+                text += arr[i] + '  ';
                 count++;
             }
         }
-        alert('Tong cong co ' + count + ' phan tu co gia tri >=10' + text);
+        alert('Tong cong co ' + count + ' phan tu co gia tri >=10 la: ' + text);
         
     }
 
     function exercise2() {
+        let check = [];//conaldev
         let arr = [];
-        for (let i = 1; i <= 10; i++) {
-            let value =+prompt('Nhap vao so nguyen thu ' + i);
-            arr.push(value);
+        for(let i=0;i<99999;++i) {
+            check[i] = true;
         }
-        let max_value = arr[0];
-        let max_index = 0;
-        for (let i = 1; i < arr.length; i++) {
-            if (max_value < arr[i]) {
-                max_value = arr[i];
-                max_index = i;
+        let index=0;
+        let max=-99999;
+        let index_max=0;
+        while(index<10){
+            let k =index+1;
+            let number =+ prompt("Enter a number thu "+ k);
+            if(check[number]===true) {
+                check[number]=false;
+                arr[index]=number;
+                if(max<arr[index]){
+                    max=arr[index];
+                    index_max=index;
+                }
+                ++index;
             }
         }
-        alert('Gia tri lon nhat trong mang la: ' + max_value + ' tai vi tri: ' + max_index);
+        alert("mang nhap la: " + arr + " max la: " + max + " index max la " + index_max);
     }
 
     function exercise3() {
@@ -172,6 +180,7 @@
         for (let i = 0; i < arr.length; i++) {
             if (v == arr[i]) {
                 isExist = true;
+                break;
             }
         }
         if (isExist) {
@@ -248,13 +257,7 @@
             arrB.push(value);
         }
         let arrC = new Array(arrA.length + arrB.length);
-        for (let i = 0; i < arrC.length; i++) {
-            if (i < arrA.length) {
-                arrC[i] = arrA[i];
-            } else {
-                arrC[i] = arrB[i - arrA.length];
-            }
-        }
+            arrC = arrA.concat(arrB);
         alert("mang C la " + arrC);
     }
 </script>

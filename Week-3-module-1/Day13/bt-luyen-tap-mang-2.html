@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Bài 1: Mảng 2 chiều in ra các phần tử trong mảng</h4>
+    <input type="button" value="Run" onclick="display2dArray()" />
+    <h4>Bài 2: str = "chao moi nguoi" đảo ngược mảng</h4>
+    <input type="button" value="Run" onclick="reverseArray()" />
+    <h4>Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng. </h4>
+    <input type="button" value="Run" onclick="countNumberInString()" />
+    <h4>Bài 4: Viết một chương trình để đếm số từ trong một chuỗi</h4>
+    <input type="button" value="Run" onclick="countWord()" />
+    <h4>Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</h4>
+    <input type="button" value="Run" onclick="excercise5()" />
+    <h4>Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )</h4>
+    <input type="button" value="Run" onclick="excercise6()" />
+    <p id="output"></p>
+    <script>
+        function display2dArray(){
+            let a = [
+                    [1, 2, 1, 24],
+                    [8, 11, 9, 4],
+                    [7, 0, 7, 27],
+                    [7, 4, 28, 14],
+                    [3, 10, 26, 7]
+                ];
+                for (let i in a) {
+                    console.log("row " + i);
+                    for (let j in a[i]) {
+                        console.log(" " + a[i][j]);
+                    }
+                }
+        }//conaldev
+        function reverseArray() {
+            let str = "chao moi nguoi";
+            str = Array.from(str);
+            let first=0;
+            let last = str.length-1;
+            let temp;
+            while(first<last) {//conaldev
+                    temp = str[first];
+                    str[first] = str[last];
+                    str[last] = temp;
+                    first++;
+                    last--;
+            }
+            alert("mảng đảo ngược thành chuỗi là: "+str.join(""));
+        }
+        function countNumberInString() {
+            let arrLength =+ prompt("Enter array length");
+            let arr = [];
+            for(let i=0;i<arrLength;i++){
+                let k=i+1;
+                arr[i] = prompt("Phan tu thu " + k);
+            }
+            let countNums=0;
+            for(let i=0;i<arrLength;i++){
+                if(isNaN(arr[i])==false) ++countNums;
+            }
+            alert("số ký tự số trong chuỗi = "+countNums);
+        }
+        function countWord() {
+            let str = prompt("Enter a string ")
+                str = str.normalize("NFC");
+                let countWord = 0;
+                if (str[0] != ' ') {
+                    countWord++;
+                }
+                for (let i = 0; i < str.length; i++) {
+                    if (str[i] == ' ' && str[i+1] != ' ') {
+                        countWord++;
+                    }
+                }
+                alert
+        }
+        function compareStrings(str1,str2) {
+            if(str1===str2) return true;
+            else return false
+        }
+        function excercise5() {
+            let str1 = prompt("Enter a string 1");
+            let str2= prompt("Enter a string 2");
+            alert(compareStrings(str1,str2));
+        }
+        function excercise6() {
+            let arrCharacter = [];
+            let length =+ prompt("Enter array length");
+            for(let i=0;i<length;++i) {
+                arrCharacter[i] = prompt("Enter a character");
+            }
+            for(let i=0;i<arrCharacter.length;++i) {
+                if(arrCharacter[i]==="-") arrCharacter[i]= "_";
+            }
+            alert(arrCharacter);
+        }
+    </script>
+</body>
+</html>

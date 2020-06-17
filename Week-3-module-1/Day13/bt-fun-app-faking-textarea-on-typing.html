@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- MinhDDS -->  
+<head><!-- MinhDDS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bt</title>
 </head>
 <body>
-    <h1 style="text-align: center;">Type anthing slowly</h1>
-    <!-- MinhDDS -->    
-    <textarea style="display: block; margin-left: auto;margin-right: auto;" id ="text" rows = "10" cols = "50" autofocus onkeypress="fakingTextarea()"></textarea>
-    <script>
-        let fakeText= "I am a super stupid human !!"
-        let runFake = "";
-        function fakingTextarea(){
-            textLength = document.getElementById("text").value.length;
-            if(textLength>0) {
-                for( let index =0; index<textLength;++index) {
-                    runFake += fakeText[index];
-                    if(index === fakeText.length) {
-                        runFake = "";
-                        document.getElementById("text").value ="";
-                    }
+<h1 style="text-align: center;">Type anthing slowly</h1>
+<!-- MinhDDS -->
+<textarea style="display: block; margin-left: auto;margin-right: auto;" id ="text" rows = "10" cols = "50" autofocus onkeypress="fakingTextarea()" ></textarea>
+<script>
+    let fakeText= "I am a super stupid human !!"
+    let runFake = "";
+    function fakingTextarea(){
+        textLength = document.getElementById("text").value.length;
+        if(textLength>0) {
+            for( let index =0; index<textLength;++index) {
+                runFake += fakeText[index];
+                if(index === fakeText.length) {
+                    runFake = "";
+                    document.getElementById("text").value ="";
                 }
             }
-            document.getElementById("text").value = runFake;
-            runFake = "";
-            setTimeout("fakingTextarea()", 1);
-        } 
-    </script>
-    <!-- MinhDDS -->  
+        }
+        document.getElementById("text").value = runFake;
+        runFake = "";
+        setTimeout("fakingTextarea()", 1);
+    }
+</script>
+<!-- MinhDDS -->
 </body>
 </html>
