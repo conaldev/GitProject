@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt hcn</title>
+</head>
+<body>
+    <canvas id ="_canvas" height="800px" width="1400px"></canvas><br><br>
+    <p id = "ok" style="font-size: xx-large"></p>
+    <script>
+        function Rectangle(width,height) {
+            this.width = width;
+            this.height = height;
+            this.area = function () {
+                return this.width*this.height;
+            }
+            this.perimeter = function () {
+                return 2*(this.width+this.height);
+            }
+            this.display = function () {
+                let ctx = document.getElementById("_canvas").getContext("2d");
+                ctx.strokeRect(this.width,this.height,this.width,this.height)
+            }
+            this.setWidthHeight = function () {
+                this.width =+ prompt("Enter the width ");
+                this.height =+ prompt("Enter the height ");
+            }
+        }
+        let hcn = new Rectangle();
+        hcn.setWidthHeight();
+        let newWidth = hcn.width;
+        let newHeight = hcn.height;
+        hcn.display();
+        let newArea = hcn.area();
+        let newPrimeter = hcn.perimeter();
+        let text = "Area = "+ newArea+ " Perimeter = " +newPrimeter;
+        document.getElementById("ok").textContent = text;
+    </script>
+</body>
+</html>
