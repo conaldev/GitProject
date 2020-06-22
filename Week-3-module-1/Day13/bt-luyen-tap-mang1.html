@@ -101,24 +101,23 @@
     function exercise2() {
         let check = [];//conaldev
         let arr = [];
-        for(let i=0;i<99999;++i) {
-            check[i] = true;
-        }
-        let index=0;
+        // for(let i=0;i<99999;++i) {
+        //     check[i] = true;
+        // }
+        // let index=0;
         let max=-99999;
         let index_max=0;
         while(index<10){
             let k =index+1;
             let number =+ prompt("Enter a number thu "+ k);
-            if(check[number]===true) {
-                check[number]=false;
+                check[number]=false
                 arr[index]=number;
                 if(max<arr[index]){
                     max=arr[index];
                     index_max=index;
                 }
                 ++index;
-            }
+            
         }
         alert("mang nhap la: " + arr + " max la: " + max + " index max la " + index_max);
     }

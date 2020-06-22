@@ -194,21 +194,21 @@
         arr.reverse();
         document.getElementById('scr8').innerText = arr;
     }
-
-        function bai9() {
-            let str = prompt('Nhap vao mang ky tu bat ky');
-            let count = 0;
-            let char = prompt('Nhap vao ky tu bat ky').substr(0, 1);
+        function checkCharacter(str,char) {
+            let count =0 ;
             for (let i = 0; i < str.length; i++) {
                 if (char == str[i]) {
                     count++;
                 }
             }
-            document.getElementById('scr9').innerHTML = 'Ky tu <b>' + char + ' </b> xuat hien ' + count + ' lan.'
-
+            if(count==0) return -1;
+            else return "Ky tu " + char + " xuat hien " + count + " lan ";
         }
-
-
+        function bai9() {//conaldev
+            let str = prompt('Nhap vao mang ky tu bat ky');
+            let char = prompt('Nhap vao ky tu bat ky');
+            alert(checkCharacter(str,char));   
+        }
 </script>
 
 </body>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>th xây dụng lớp date</title>
+</head>
+<body>
+    <script>
+        let MyDate = function(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            this.getDay = function() {
+                return this.day;
+            }
+            this.getMonth = function() {
+                return this.month;
+            }
+            this.getYear = function() {
+                return this.year;
+            }
+            this.setDay = function () {
+               return this.day =+ prompt("Day: ");
+            }
+            this.setMonth = function () {
+                return this.month =+ prompt("Month: ");
+            }
+            this.setYear = function () {
+                return this.year =+ prompt("Year: ");
+            }
+        };
+        let date = new MyDate(12,12,2020);
+        let day = date.getDay();
+        let month = date.getDay ();
+        let year = date.getYear();
+        alert(day+"/"+month+"/"+year);
+        day = date.setDay();
+        month = date.setMonth();
+        year = date.setYear();
+        alert(day + "/" + month + "/" + year);
+
+    </script>
+</body>
+</html>

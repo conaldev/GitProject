@@ -20,9 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="017010e9-13a2-4c23-b405-017f8587353d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Week-3-module-1/Exercise15th/jbkjbj.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week-4-module-1/Excercise16th/th-xây-dựng-lớp-date.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week-3-module-1/Day13/bt-fun-app-faking-textarea-on-typing.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week-3-module-1/Day13/bt-fun-app-faking-textarea-on-typing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week-3-module-1/Day12/th-tao-ban-co-caro-simple.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week-3-module-1/Day12/th-tao-ban-co-caro-simple.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week-3-module-1/Day13/bt-Tic-tac-toe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week-3-module-1/Day13/bt-Tic-tac-toe.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Week-3-module-1/Day13/bt-luyen-tap-mang1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week-3-module-1/Day13/bt-luyen-tap-mang1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week-3-module-1/Exercise15th/bt-luyen-tap-tao-su-dung-ham2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week-3-module-1/Exercise15th/bt-luyen-tap-tao-su-dung-ham2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week-3-module-1/Exercise15th/bt-ung-dung-quan-ly-sp-su-dung-ham.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week-3-module-1/Exercise15th/bt-ung-dung-quan-ly-sp-su-dung-ham.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/game-puzzle.html" beforeDir="false" afterPath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/game-puzzle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/btChung/btLuyenTapDieuKien1/bt6.html" beforeDir="false" afterPath="$PROJECT_DIR$/btChung/btLuyenTapDieuKien1/bt6.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +40,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Week-3-module-1/Exercise15th/bt-ung-dung-quan-ly-sp-su-dung-ham.html" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../test.html" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1cqfMXqAeiUEJveheb9lAN9JlHB" />
   <component name="ProjectLevelVcsManager">
@@ -52,9 +65,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Untitled-1.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunManager">
     <configuration name="game-puzzle.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/GitProject/btChung/BtJSinHTMLchung/game-puzzle.html" useBuiltInWebServerPort="true">
@@ -105,6 +119,16 @@
       <workItem from="1592357308251" duration="402000" />
       <workItem from="1592358794907" duration="142000" />
       <workItem from="1592362811856" duration="375000" />
+      <workItem from="1592450169786" duration="22000" />
+      <workItem from="1592456046589" duration="31000" />
+      <workItem from="1592562124526" duration="362000" />
+      <workItem from="1592569107409" duration="631000" />
+      <workItem from="1592569746497" duration="1069000" />
+      <workItem from="1592570843752" duration="2409000" />
+      <workItem from="1592573741119" duration="1998000" />
+      <workItem from="1592630577161" duration="605000" />
+      <workItem from="1592790612148" duration="437000" />
+      <workItem from="1592791057239" duration="1543000" />
     </task>
     <servers />
   </component>
@@ -123,11 +147,15 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="bt" />
+    <option name="LAST_COMMIT_MESSAGE" value="bt" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1309" y="422" width="251" height="270" key="#Notifications" timestamp="1591322982665">
+    <state x="1309" y="422" width="254" height="270" key="#Notifications" timestamp="1592575994437">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="1309" y="422" width="251" height="270" key="#Notifications/0.27.1920.1053@0.27.1920.1053" timestamp="1591322982665" />
+    <state x="1309" y="422" width="254" height="270" key="#Notifications/0.27.1920.1053@0.27.1920.1053" timestamp="1592575994437" />
     <state x="717" y="332" width="475" height="449" key="#Web_Browsers" timestamp="1591789617149">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -136,10 +164,14 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1591861023902" />
-    <state x="1223" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1592205249152">
+    <state x="693" y="404" width="524" height="306" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1592792187891">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="1223" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1592205249152" />
+    <state x="693" y="404" width="524" height="306" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.27.1920.1053@0.27.1920.1053" timestamp="1592792187891" />
+    <state x="1223" y="311" width="527" height="491" key="FileChooserDialogImpl" timestamp="1592573720132">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="1223" y="311" width="527" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1592573720132" />
     <state width="1897" height="340" key="GridCell.Tab.0.bottom" timestamp="1591867809141">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -204,9 +236,17 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1897" height="340" key="GridCell.Tab.3.right/0.27.1920.1053@0.27.1920.1053" timestamp="1591867809143" />
-    <state x="338" y="183" width="1022" height="737" key="SettingsEditor" timestamp="1592362998360">
+    <state x="0" y="150" width="1022" height="737" key="SettingsEditor" timestamp="1592791344343">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="338" y="183" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1592362998360" />
+    <state x="0" y="150" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1592791344343" />
+    <state x="1309" y="399" width="251" height="315" key="cloudConfig.SelfSettingsDialog" timestamp="1592791255024">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="1309" y="399" width="251" height="315" key="cloudConfig.SelfSettingsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1592791255024" />
+    <state x="1104" y="252" key="run.anything.popup" timestamp="1592791960850">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="1104" y="252" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1592791960850" />
   </component>
 </project>

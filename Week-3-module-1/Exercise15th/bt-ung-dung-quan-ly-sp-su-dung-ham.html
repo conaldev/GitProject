@@ -2,13 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý sản phẩm</title>
+    <style>
+
+    </style>
 </head>
 <body>
+<div>
+    <label><input type="text" style="width: 300px; height: 30px;" id="input" placeholder="New Product"/></label>
+    <input type="button" value="Add New Product"
+           style="height: 35px;background-color: rgb(23, 207, 23);font-weight: bold ; color: white;"
+           onclick="addProduct()">
+</div>
+<b style="font-size:25px;"><p>Display All Product</p></b>
+<div id="display"></div>
 
 
-    
-    
+<script>
+    let arrProduct = ["Macbook Pro 2020", "iPhone XS Max", "Samsung Galaxy Note 10", "Dell Latitude 7390", "Thinkpad P53"];
+    displayProduct();
+
+    function displayProduct() {
+        let text = "";
+        text += "<table><tr><th>STT</th><th>Product Name</th></tr>";
+        for (let i = 0; i < arrProduct.length; ++i) {
+            text += '<tr ><td style="width: 30px" id="td' + i + '">' + (i + 1) + '</td>' + '<td>' + arrProduct[i] + '</td>'
+                + '<td align="center" style="width: 62px"><input  type="button" onclick="editProduct(' + i + ')" value="EDIT"></td>'
+                + '<td align="center" style="width: 62px"><input  type="button" onclick="deleteProduct(' + i + ')" value="DELETE"></td>'
+                + '</tr>';
+        }
+        document.getElementById("display").innerHTML = text;
+    }
+
+    function addProduct() {
+        let newProduct = document.getElementById("input").value;
+        if (newProduct != "") {
+            arrProduct.push(newProduct);
+            displayProduct();
+        } else alert("Enter a device name.")
+    }
+
+    function deleteProduct(id) {
+        arrProduct.splice(id, 1);
+        displayProduct();
+    }
+
+    function editProduct(id) {
+        document.getElementById('td' + id).innerHTML = '<input class="textbox_edit" type="text" id="txt_edit"> <button type="button" onclick="saveProduct(' + id
+            + ')">SAVE</button> <button type="button" onclick="cancelEdit(' + id + ')">CANCEL</button>';
+    }
+
+    function cancelEdit(id) {
+        displayProduct();
+    }
+
+    function saveProduct(id) {
+        let value = document.getElementById('txt_edit').value;
+        if (value != '') {
+            arrProduct[id] = value;
+            document.getElementById('td' + id).innerHTML = arrProduct[id];
+        }
+    }
+
+</script>
 </body>
 </html>
