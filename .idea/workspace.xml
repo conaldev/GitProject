@@ -20,17 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="017010e9-13a2-4c23-b405-017f8587353d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Week-3-module-1/Exercise15th/jbkjbj.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week-4-module-1/Excercise16th/th-xây-dựng-lớp-date.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week-4-module-1/Excercise16th/th-xay-dung-lop-hinh-tron.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week-3-module-1/Day12/th-tao-ban-co-caro-simple.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week-3-module-1/Day12/th-tao-ban-co-caro-simple.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week-3-module-1/Day13/bt-Tic-tac-toe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week-3-module-1/Day13/bt-Tic-tac-toe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week-3-module-1/Day13/bt-luyen-tap-mang1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week-3-module-1/Day13/bt-luyen-tap-mang1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week-3-module-1/Exercise15th/bt-luyen-tap-tao-su-dung-ham2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week-3-module-1/Exercise15th/bt-luyen-tap-tao-su-dung-ham2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week-3-module-1/Exercise15th/bt-ung-dung-quan-ly-sp-su-dung-ham.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week-3-module-1/Exercise15th/bt-ung-dung-quan-ly-sp-su-dung-ham.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/game-puzzle.html" beforeDir="false" afterPath="$PROJECT_DIR$/btChung/BtJSinHTMLchung/game-puzzle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btChung/btLuyenTapDieuKien1/bt6.html" beforeDir="false" afterPath="$PROJECT_DIR$/btChung/btLuyenTapDieuKien1/bt6.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +119,7 @@
       <workItem from="1592573741119" duration="1998000" />
       <workItem from="1592630577161" duration="605000" />
       <workItem from="1592790612148" duration="437000" />
-      <workItem from="1592791057239" duration="1543000" />
+      <workItem from="1592791057239" duration="3422000" />
     </task>
     <servers />
   </component>

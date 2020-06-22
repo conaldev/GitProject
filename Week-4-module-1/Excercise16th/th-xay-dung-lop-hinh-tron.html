@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xd lop hinh tron</title>
+</head>
+<body>
+    <script>
+    function Circle(radius) {
+        this.radius =radius;
+        this.getRadius = function () {
+            return radius;
+        }
+        this.getArea = function() {
+            return Math.PI * this.radius*this.radius;
+        }
+        this.setRadius = function () {
+            let newRadius =+ prompt("Enter a Radius");
+            this.radius = newRadius;
+            return newRadius;
+        }
+    }
+    let circle = new Circle(2);
+    let radius = circle.getRadius();
+    let area = circle.getArea();
+    alert("radius = " +radius+ " area = " + area);
+    let {getArea, setRadius} = new Circle();
+    radius = setRadius();
+    area = getArea();
+    alert("radius = " +radius+" area = "+area);
+    </script>
+</body>
+</html>
