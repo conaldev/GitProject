@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<div id="out" style="font-size: xx-large"></div>
+<script>
+    function Temperature() {
+        this.C_degree = 10;
+        this.F_degree = 10;
+        this.K_degree = 10;
+        this.CtoF = function () {
+            this.F_degree = this.C_degree * 1.8 + 32;
+            return this.F_degree;
+        }
+        this.CtoK = function () {
+            this.K_degree = this.C_degree + 237.15;
+            return this.K_degree;
+        }
+    }
+
+    let today = new Temperature();
+    today.C_degree = 25;
+    let a = today.CtoF();
+    let b = today.CtoK();
+    document.getElementById("out").innerHTML = "C to F = " + a + " C to K = " + b;
+</script>
+</body>
+</html>
