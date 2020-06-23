@@ -1,4 +1,4 @@
-function ElectricLamp() {
+function ElectricLamp() {//conaldev
     this.status = false;
     this.turnOn = function () {
         if (!this.status)
@@ -19,14 +19,15 @@ function SwitchButton() {
     this.switchOff = function () {
         this.lamp.turnOff();
     }
-}
+}//conaldev
 
 let button = new SwitchButton();
-let BedroomLamp = new ElectricLamp();
+let BedroomLamp = new ElectricLamp();//conaldev
 button.connectToLamp(BedroomLamp);
-for(let i =1 ;i<=10;i++){
+for(let i =1 ;i<=10;i++){//conaldev
     button.switchOn();
     console.log(BedroomLamp.status);
     button.switchOff();
     console.log(BedroomLamp.status);
 }
+//conaldev
