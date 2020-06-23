@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="017010e9-13a2-4c23-b405-017f8587353d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Week-4-module-1/Excercise16th/bt-xay-dung-lop-mo-ta-dien-thoai.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week-4-module-1/Excercise17th/cong-tac-bong-den.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week-4-module-1/Excercise17th/cong-tac-bong-den.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +62,11 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Node.js.script.js">
+  <component name="RunManager" selected="Node.js.bt-xay-dung-lop-mo-ta-dien-thoai.js">
     <configuration name="game-puzzle.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/GitProject/btChung/BtJSinHTMLchung/game-puzzle.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="bt-xay-dung-lop-mo-ta-dien-thoai.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Week-4-module-1/Excercise16th/bt-xay-dung-lop-mo-ta-dien-thoai.js" working-dir="$PROJECT_DIR$/Week-4-module-1/Excercise16th">
       <method v="2" />
     </configuration>
     <configuration name="script.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Week-4-module-1/Excercise17th/simple-di-chuyen-doi-tuong/script.js" working-dir="$PROJECT_DIR$/Week-4-module-1/Excercise17th/simple-di-chuyen-doi-tuong">
@@ -71,6 +74,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.bt-xay-dung-lop-mo-ta-dien-thoai.js" />
         <item itemvalue="Node.js.script.js" />
         <item itemvalue="JavaScript Debug.game-puzzle.html" />
       </list>
@@ -133,7 +137,8 @@
       <workItem from="1592922262129" duration="91000" />
       <workItem from="1592922370919" duration="54000" />
       <workItem from="1592922451081" duration="383000" />
-      <workItem from="1592922845012" duration="5855000" />
+      <workItem from="1592922845012" duration="6080000" />
+      <workItem from="1592951115795" duration="135000" />
     </task>
     <servers />
   </component>
